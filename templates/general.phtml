@@ -1,0 +1,49 @@
+<?php include_once('templates/section_head.phtml'); ?>
+
+<div class="boxtitle"><?php echo _("isp_general")?></div>
+<div id="prefs-details">
+<fieldset><legend><?php echo _("isp_general")?> ::: <?php echo $username?></legend> <br>
+<table summary="" border="0" cellpadding="3">
+	<tbody>
+		<tr>
+			<td class="title"><?php echo _("Username")?></td>
+			<td class=""><?php echo $username?></td>
+		</tr>
+		<tr>
+			<td class="title"><?php echo _("Server")?></td>
+			<td class=""><?php echo $server_address?></td>
+		</tr>
+		<tr>
+			<td class="title"><?php echo _("defaultidentity")?></td>
+			<td class=""><?php echo $ident['full_name']?>
+			&lt;<?php echo $ident['email_address']?>&gt;</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+</fieldset>
+<fieldset><legend><?php echo _("isp_alias")?> ::: <?php echo $username?></legend> <br>
+<div id="alias-cont">
+<table id="alias-table" class="records-table" summary="" border="0"
+	cellspacing="0">
+	<thead>
+		<tr>
+			<td width="100%"><?php echo $mail?></td>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+	foreach ($aliases as $alias) { 
+		echo '<tr style="background: '.$color[4].';">
+			<td>'.$alias.'</td></tr>'; 
+	}
+	?>
+	</tbody>
+</table>
+</div>
+<br />
+</fieldset>
+
+</div>
+
+<?php include_once('templates/section_footer.phtml'); ?>

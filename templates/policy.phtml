@@ -1,0 +1,84 @@
+<?php include_once ('templates/section_head.phtml'); ?>
+
+<script type="text/javascript">
+function set_policy(policy_name, policy_id)
+{
+	if (confirm('<?php echo _('policyconfirm')?>: '+policy_name+'?')) {
+		location.href = "<?php echo $base_url . '?page='.POLICY_PAGE.'&action=setpolicy&_id='?>"+policy_id;
+	}
+}
+</script>
+
+<div id="prefs-title" class="boxtitle"><?php echo _('isp_policy')?></div>
+<div id="prefs-details">
+<form name="filterform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.POLICY_PAGE?>" method="post">
+<input name="_id" type="hidden" value="<?php echo $id?>" />
+<fieldset><legend><?php echo _('isp_policy')?> ::: <?php echo $username?></legend> <br />
+<?php 
+if (empty($policy['policy_name'])) {
+	echo '<div style="margin-left: 5px;">'._("nopolicy").'</div>';
+} 
+else {
+?>
+<table summary="" border="0" cellpadding="3">
+	<tbody>
+		<tr>
+			<td class="title"><?php echo _("junkpolicy_name")?>:</td>
+			<td class=""><?php echo $policy['policy_name']?></td>
+		</tr>
+		<tr>
+			<td class="title"><?php echo _("junktaglevel")?>:</td>
+			<td class=""><?php echo $policy['spam_tag_level']?></td>
+		</tr>
+		<tr>
+			<td class="title"><?php echo _("junkkilllevel")?>:</td>
+			<td class=""><?php echo $policy['spam_kill_level']?></td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<?php } ?>
+</fieldset>
+
+</form>
+<fieldset><legend><?php echo _('junksetpolicy')?> ::: <?php echo $username?></legend> <br />
+<div id="policies-cont">
+<table id="policies-table" class="records-table" summary="" border="0" cellspacing="0">
+	<thead>
+		<tr>
+			<td width="330px"><?php echo _('junkpolicy_name')?></td>
+			<td width="60px"><?php echo _('junktaglevel')?></td>
+			<td width="60px"><?php echo _('junkkilllevel')?></td>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+	if(count($entries) == 0)
+	{
+		echo '<tr style="background:'.$color[4].';">
+		<td colspan="3">'._('nofetch').'</td>
+		</tr>';	
+	} 
+	else
+	{
+		foreach ($entries as $entry)
+		{
+			echo '<tr style="background:'.$color[4].';">
+			<td>
+			<a href="#" onclick="set_policy(\''.$entry['policy_name'].'\', '.$entry['id'].'); return false;">'.$entry['policy_name'].'</a>
+			</td>
+			<td>'.$entry['spam_tag_level'].'</td>
+			<td>'.$entry['spam_kill_level'].'</td>
+			</tr>';
+		}
+	}
+	?>
+	</tbody>
+</table>
+</div>
+<br>
+</fieldset>
+
+</div>
+
+<?php include_once ('templates/section_footer.phtml'); ?>

@@ -1,0 +1,76 @@
+<?php include_once ('templates/section_head.phtml'); ?>
+
+<script type="text/javascript">
+function set_policy(policy_name, policy_id)
+{
+	if (confirm('<?php echo _('junksetpolicy')?>: '+policy_name)) {
+		location.href = "<?php echo SM_PATH . 'plugins/ispconfig3/section.php?page='.JUNK_PAGE.'&action=setpolicy&_id='?>"+policy_id;
+	}
+}
+
+</script>
+<div id="prefs-title" class="boxtitle"><?php echo _('isp_junk')?></div>
+<div id="prefs-details">
+<form name="filterform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.JUNK_PAGE?>" method="post">
+<fieldset><legend><?php echo _('isp_junk')?> ::: <?php echo $username?></legend> <br />
+<table summary="" border="0" cellpadding="3">
+	<tbody>
+		<tr>
+			<td class="title"><?php echo _("junkpolicy")?>:</td>
+			<td class=""><?php echo $policy['policy_name']?></td>
+		</tr>
+		<tr>
+			<td class="title"><?php echo _("junktaglevel")?>:</td>
+			<td class=""><?php echo $policy['spam_tag_level']?></td>
+		</tr>
+		<tr>
+			<td class="title"><?php echo _("junkkilllevel")?>:</td>
+			<td class=""><?php echo $policy['spam_kill_level']?></td>
+		</tr>
+	</tbody>
+</table>
+<br>
+</fieldset>
+
+</form>
+<fieldset><legend><?php echo _('junkpolicies')?></legend> <br />
+<div id="policies-cont">
+<table id="policies-table" class="records-table" summary="" border="0" cellspacing="0">
+	<thead>
+		<tr>
+			<td width="350px"><?php echo _('junkpolicy_name')?></td>
+			<td width="50px"><?php echo _('junktaglevel')?></td>
+			<td width="50px"><?php echo _('junkkilllevel')?></td>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+	if(count($entries) == 0)
+	{
+		echo '<tr style="background:'.$color[4].';">
+		<td colspan="3">'._('nofetch').'</td>
+		</tr>';	
+	} 
+	else
+	{
+		foreach ($entries as $entry)
+		{
+			echo '<tr style="background:'.$color[4].';">
+			<td>
+			<a href="#" onclick="set_policy(\''.$entry['policy_name'].'\', '.$entry['id'].'); return false;">'.$entry['policy_name'].'</a>
+			</td>
+			<td>'.$entry['spam_tag_level'].'</td>
+			<td>'.$entry['spam_kill_level'].'</td>
+			</tr>';
+		}
+	}
+	?>
+	</tbody>
+</table>
+</div>
+<br>
+</fieldset>
+
+</div>
+
+<?php include_once ('templates/section_footer.phtml'); ?>

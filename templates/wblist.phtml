@@ -1,0 +1,108 @@
+<?php include_once ('templates/section_head.phtml'); ?>
+
+<div id="prefs-title" class="boxtitle"><?php echo _('isp_wblist')?></div>
+<div id="prefs-details">
+<form name="filterform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.WBLIST_PAGE?>" method="post">
+<fieldset><legend><?php echo _("isp_wblist")?> ::: <?php echo $username?></legend> <br />
+<input name="_id" type="hidden" value="<?php echo $wblist_id?>" />
+<table>
+
+	<tbody>
+		<tr>
+			<td class="title"><label for="email"><?php echo _("junkaddress")?>:</label></td>
+			<td><input name="_email" id="email" size="25" type="text" value="<?php echo $email?>"></td>
+		</tr>
+		<tr>
+			<td class="title"><label for="wb"><?php echo _("junktype")?>:</label></td>
+			<td>
+			<select name="_wb" id="wb">
+			<?php
+			foreach (array('W' => 'Whitelist', 'B' => 'Blacklist') as $_val => $_type) 
+			{
+				if ($_val == $wb) {
+					echo '<option value="'.$_val.'" selected="selected">'.$_type.'</option>';
+				} else {
+					echo '<option value="'.$_val.'">'.$_type.'</option>';
+				} 
+			}
+			?>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="title"><label for="_priority"><?php echo _("junkpriority")?>:</label></td>
+			<td>
+			<select name="_priority" id="priority">
+			<?php
+			if (empty($priority)) {
+				$priority = 7; // provide default
+			}
+			
+			foreach (range(1, 10) as $_val)
+			{
+				if ($_val == $priority) {
+					echo '<option value="'.$_val.'" selected="selected">'.$_val.'</option>';
+				} else {
+					echo '<option value="'.$_val.'">'.$_val.'</option>';
+				} 
+			}
+			?>
+			</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="title"><label for="wblistenabled"><?php echo _("fetchmailenabled")?></label>:</td>
+			<td><input name="_wblistenabled" <?php echo $wblistenabled?> id="wblistenabled" value="1" type="checkbox" /></td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<div class="footerleft"><input value="<?php echo $save?>" type="submit" /></div>
+</fieldset>
+</form>
+
+<fieldset><legend><?php echo _("fetchmail_entries")?> ::: <?php echo $username?></legend>
+<br>
+<div id="wblist-cont">
+<table id="wblist-table" class="records-table" summary="" border="0"
+	cellspacing="0">
+	<thead>
+		<tr>
+			<td width="342px"><?php echo _("junkaddress")?></td>
+			<td width="46px"><?php echo _("junktype")?></td>
+			<td width="16px"></td>
+			<td width="16px"></td>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+	if(count($entries) == 0)
+	{
+		echo '<tr style="background:'.$color[4].';">
+		<td colspan="4">'._('nofetch').'</td>
+		</tr>';	
+	} 
+	else
+	{
+		foreach ($entries as $entry)
+		{
+			$wb_label = ($entry['wb'] == 'W') ? 'Whitelist' : 'Blacklist';
+			
+			echo '<tr style="background:'.$color[4].';">
+			<td><a href="'. $base_url . '?page='.WBLIST_PAGE.'&action=edit&_id='.$entry['wblist_id'].'">'.$entry['email'].'</a></td>
+			<td>'.$wb_label.'</a></td>
+			<td><span title="Enabled">'.$entry['active'].'</span></td>
+			<td><a href="'. $base_url . '?page='.WBLIST_PAGE.'&action=delete&_id='.$entry['wblist_id'].'">del</a></td>
+			</tr>';
+		}
+	}
+	?>
+	</tbody>
+</table>
+</div>
+<br>
+</fieldset>
+
+</div>
+
+<?php include_once ('templates/section_footer.phtml'); ?>

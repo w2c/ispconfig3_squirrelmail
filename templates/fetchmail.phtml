@@ -1,0 +1,99 @@
+<?php include_once ('templates/section_head.phtml'); ?>
+
+<div id="prefs-title" class="boxtitle"><?php echo _("isp_fetchmail")?></div>
+<div id="prefs-details">
+<form name="fetchmailform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.FETCHMAIL_PAGE?>" method="post">
+<fieldset><legend><?php echo _("isp_fetchmail")?> ::: <?php echo $username?></legend> <br />
+<input name="_id" type="hidden" value="<?php echo $mailget_id?>" /> 
+<input name="_serverid" type="hidden" value="<?php echo $server_id?>" />
+<table>
+	<tbody>
+		<tr>
+			<td class="title"><label for="fetchmailtyp"><?php echo _("fetchmailtyp")?></label>:</td>
+			<td><select name="_fetchmailtyp" id="fetchmailtyp">
+			<?php
+			foreach (array('pop3', 'imap') as $_type) 
+			{ 
+				if ($_type == $type) { 
+					echo '<option value="'.$_type.'" selected="selected">'.strtoupper($_type).'</option>';
+				} else { 
+					echo '<option value="'.$_type.'">'.strtoupper($_type).'</option>';
+				} 
+			}
+			?>
+			</select></td>
+		</tr>
+		<tr>
+			<td class="title"><label for="fetchmailserver"><?php echo _("fetchmailserver")?></label>:</td>
+			<td><input name="_fetchmailserver" id="fetchmailserver" size="40"
+				type="text" value="<?php echo $source_server?>"></td>
+		</tr>
+		<tr>
+			<td class="title"><label for="fetchmailuser"><?php echo _("Username")?></label>:</td>
+			<td><input name="_fetchmailuser" id="fetchmailuser" size="40"
+				type="text" value="<?php echo $source_username?>"></td>
+		</tr>
+		<tr>
+			<td class="title"><label for="fetchmailpass"><?php echo _("isp_pass")?></label>:</td>
+			<td><input name="_fetchmailpass" id="fetchmailpass" size="40"
+				autocomplete="off" type="password" value="<?php echo $source_password?>"></td>
+		</tr>
+		<tr>
+			<td class="title"><label for="fetchmaildelete"><?php echo _("fetchmaildelete")?></label>:</td>
+			<td><input name="_fetchmaildelete"
+				<?php echo $fetchmaildelete?> id="fetchmaildelete" value="1" type="checkbox"></td>
+		</tr>
+		<tr>
+			<td class="title"><label for="fetchmailenabled"><?php echo _("fetchmailenabled")?></label>:</td>
+			<td><input name="_fetchmailenabled"
+				<?php echo $fetchmailenabled?> id="fetchmailenabled" value="1" type="checkbox" /></td>
+		</tr>
+
+	</tbody>
+</table>
+<br>
+<div class="footerleft"><input value="<?php echo $save?>" type="submit" /></div>
+</fieldset>
+
+</form>
+<fieldset><legend><?php echo _("fetchmail_entries")?> ::: <?php echo $username?></legend>
+<br>
+<div id="fetch-cont">
+<table id="fetch-table" class="records-table" summary="" border="0"
+	cellspacing="0">
+	<thead>
+		<tr>
+			<td width="388px"><?php echo _("fetchmailserver")?></td>
+			<td width="16px"></td>
+			<td width="16px"></td>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+	if(count($entries) == 0)
+	{
+		echo '<tr style="background:'.$color[4].';">
+		<td colspan="3">'._('nofetch').'</td>
+		</tr>';	
+	} 
+	else
+	{
+		foreach ($entries as $entry)
+		{
+			echo '<tr style="background:'.$color[4].';">
+			<td><a href="'. $base_url . '?page='.FETCHMAIL_PAGE.'&action=edit&_id='.$entry['mailget_id'].'">'.$entry['source_server'].'</a></td>
+			<td><span title="Enabled">'.$entry['active'].'</span></td>
+			<td><a href="'. $base_url . '?page='.FETCHMAIL_PAGE.'&action=delete&_id='.$entry['mailget_id'].'">del</a></td>
+			</tr>';
+		}
+	}
+	?>
+	</tbody>
+</table>
+</div>
+<br>
+</fieldset>
+
+</div>
+
+<?php include_once ('templates/section_footer.phtml'); ?>

@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+
+<head>
+<meta name="robots" content="noindex,nofollow">
+<style type="text/css">
+body {
+	margin: 0px;
+	padding: 0px;
+}
+
+div.boxtitle {
+	background: <?php echo $color[11]?>;
+	color: <?php echo $color[4]?>;
+	font-size: 11px;
+	font-weight: bold;
+	height: 12px !important;
+	padding: 2px 10px 5px;
+}
+
+#prefs-details {
+	margin: 15px;
+}
+
+fieldset {
+	border: 1px solid <?php echo $color[14]?>;
+	margin-bottom: 0.5em;
+	padding: 4px 8px 9px;
+}
+
+td.title {
+	color: <?php echo $color[11]?>;
+	padding-right: 10px;
+}
+
+table.records-table thead tr td {
+	background: <?php echo $color[11]?>;
+	border-bottom: 1px solid <?php echo $color[14]?>;
+	color: <?php echo $color[4]?>;
+	font-size: 11px;
+	font-weight: bold;
+	height: 20px;
+	padding: 0 4px;
+	vertical-align: middle;
+}
+
+#alias-cont {
+	background-color: <?php echo $color[4]?>;
+	border: 1px solid <?php echo $color[14]?>;
+	height: 163px;
+	overflow: auto;
+	width: 400px;
+}
+
+#alias-table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+#alias-table td {
+	padding-left: 10px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+table.records-table tbody tr td {
+	border-bottom: 1px solid <?php echo $color[12]?>;
+	font-size: 11px;
+	height: 16px;
+	overflow: hidden;
+	padding: 2px 4px;
+	text-align: left;
+	white-space: nowrap;
+}
+
+#formfooter .footerleft {
+	float: left;
+	padding-left: 20px;
+	white-space: nowrap;
+}
+
+#fetch-cont {
+	background-color: <?php echo $color[4]?>;
+	border: 1px solid <?php echo $color[14]?>;
+	height: 163px;
+	overflow: auto;
+	width: 450px;
+}
+
+#fetch-table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.date-label {
+	float:left;
+	width:75px;
+	argin:0.3em 2% 0 0;
+}
+	
+#rule-cont {
+	background-color:<?php echo $color[4]?>;
+	border:1px solid <?php echo $color[14]?>;
+	height:163px;
+	overflow:auto;
+	width:450px;
+}
+
+#rule-table {
+	display:table;
+	table-layout:fixed;
+	width:100%;
+}
+
+#policies-cont {
+	background-color:<?php echo $color[4]?>;
+	border:1px solid <?php echo $color[14]?>;
+	height:210px;
+	overflow:auto;
+	width:545px;
+}
+
+#policies-table {
+	display:table;
+	table-layout:fixed;
+	width:100%;
+}
+
+#wblist-cont {
+	background-color:<?php echo $color[4]?>;
+	border:1px solid <?php echo $color[14]?>;
+	height:210px;
+	overflow:auto;
+	width:545px;
+}
+
+#wblist-table {
+	display:table;
+	table-layout:fixed;
+	width:100%;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="<?php echo $theme_css?>">
+<title>Section page</title>
+</head>
+
+<body>
+<?php 
+sqgetGlobalVar('section_err', $_section_err, SQ_SESSION);
+if (!empty($_section_err)) {
+	plain_error_message($_section_err, $color);	
+	sqsession_unregister('section_err');
+}
+else 
+{
+	sqgetGlobalVar('section_msg', $_section_msg, SQ_SESSION);
+	if (!empty($_section_msg)) 
+	{
+		echo '<table width="100%" cellpadding="1" cellspacing="0" align="center" border="0" bgcolor="'.$color[9].'">'.
+         '<tr><td>'.
+         '<table width="100%" cellpadding="0" cellspacing="0" align="center" border="0" bgcolor="'.$color[4].'">'.
+         '<tr><td align="center" bgcolor="'.$color[0].'">'.
+         '<font color="'.$color[8].'"><b>MESSAGE:</b></font>'.
+         '</td></tr><tr><td>'.
+         '<table cellpadding="1" cellspacing="5" align="center" border="0">'.
+         '<tr>' . html_tag( 'td', $_section_msg."\n", 'left') . '</tr></table>'.
+         '</td></tr></table></td></tr></table>';
+		
+		sqsession_unregister('section_msg');
+	}
+}
+?>

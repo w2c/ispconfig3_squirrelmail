@@ -1,0 +1,136 @@
+<?php include_once ('templates/section_head.phtml'); ?>
+
+<div id="prefs-title" class="boxtitle"><?php echo _('isp_filter')?></div>
+<div id="prefs-details">
+<form name="filterform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.MAILFILTER_PAGE?>" method="post">
+<fieldset><legend><?php echo _('isp_filter')?> ::: <?php echo $username?></legend> <br />
+<table>
+
+	<input name="_id" type="hidden" value="<?php echo $filter_id?>" />
+	<tbody>
+		<tr>
+			<td class="title"><label for="filtername"><?php echo _('filtername')?></label>:</td>
+			<td><input name="_filtername" id="filtername" size="70" type="text" value="<?php echo $rulename?>" /></td>
+		</tr>
+		<tr>
+			<td class="title"><label for="filtersource"><?php echo _('filtersource')?></label>:</td>
+			<td>
+			<select name="_filtersource" id="filtersource">
+			<?php 
+			foreach (array('Subject' => _('filtersubject'), 'From' => _('filterfrom'), 'To' => _('filterto')) as $_val => $_opt)
+			{
+				if ($_val == $source) {
+					echo '<option selected="selected" value="'.$_val.'">'.$_opt.'</option>';
+				} else {
+					echo '<option value="'.$_val.'">'.$_opt.'</option>';
+				}
+			}
+			?>
+			</select> 
+			<select name="_filterop" id="filterop">
+			<?php 
+			foreach (array('contains' => _('filtercontains'), 'is' => _('filteris'), 'begins' => _('filterbegins'), 'ends' => _('filterends')) as $_val => $_opt)
+			{
+				if ($_val == $op) {
+					echo '<option selected="selected" value="'.$_val.'">'.$_opt.'</option>';
+				} else {
+					echo '<option value="'.$_val.'">'.$_opt.'</option>';
+				}
+			}
+			?>
+			</select> 
+			<input name="_filtersearchterm" id="filtersearchterm" size="43" type="text" value="<?php echo $searchterm?>" />
+			</td>
+		</tr>
+		<tr>
+			<td class="title"><label for="filteraction"><?php echo _('filteraction')?></label>:</td>
+			<td>
+			<select name="_filteraction" id="filteraction">
+				<?php 
+				foreach (array('move' => _('filtermove'), 'delete' => _('filterdelete')) as $_val => $_opt)
+				{
+					if ($_val == $action) {
+						echo '<option selected="selected" value="'.$_val.'">'.$_opt.'</option>';
+					} else {
+						echo '<option value="'.$_val.'">'.$_opt.'</option>';
+					}
+				}
+				?>
+			</select> 
+			<select name="_filtertarget" id="filtertarget">
+			<?php
+			$boxes = sqimap_mailbox_list($imapConnection);
+			
+			foreach ($boxes as $box_parts)
+			{
+				if (!in_array('noselect', $box_parts['flags'])) 
+				{
+					$box = str_replace('&nbsp;', '', $box_parts['formatted']);
+					$lowerbox = strtolower($box);
+					
+					$box2 = (strtolower($box) == 'inbox') ? _("INBOX") : $box_parts['formatted'];
+				}
+				
+				if (strtolower($target) == $lowerbox) {
+	                echo '<option value="' . htmlspecialchars($box) .'" selected="selected">'.$box2.'</option>' . "\n";
+	            } else {
+	                echo '<option value="' . htmlspecialchars($box) .'">'.$box2.'</option>' . "\n";
+	            }
+			}
+			?>
+			</select></td>
+		</tr>
+		<tr>
+			<td class="title"><label for="filterenabled"><?php echo _('filterenabled')?></label>:</td>
+			<td><input name="_filterenabled" id="filterenabled" value="1" <?php echo $filterenabled?> type="checkbox" /></td>
+		</tr>
+
+	</tbody>
+</table>
+<br>
+<div class="footerleft">
+<input value="<?php echo $save?>" type="submit" />
+</div>
+</fieldset>
+
+</form>
+<fieldset><legend><?php echo _('filter_entries')?> ::: <?php echo $username?></legend> <br />
+<div id="rule-cont">
+<table id="rule-table" class="records-table" summary="" border="0"
+	cellspacing="0">
+	<thead>
+		<tr>
+			<td width="388px"><?php echo _('filter_entries')?></td>
+			<td width="16px"></td>
+			<td width="16px"></td>
+		</tr>
+	</thead>
+	<tbody>
+	<?php
+	if(count($entries) == 0)
+	{
+		echo '<tr style="background:'.$color[4].';">
+		<td colspan="3">'._('nofetch').'</td>
+		</tr>';	
+	} 
+	else
+	{
+		foreach ($entries as $entry)
+		{
+			echo '<tr style="background:'.$color[4].';">
+			<td><a href="'. $base_url . '?page='.MAILFILTER_PAGE.'&action=edit&_id='.$entry['filter_id'].'">'.$entry['rulename'].'</a></td>
+			<td><span title="Enabled">'.$entry['active'].'</span></td>
+			<td><a href="'. $base_url . '?page='.MAILFILTER_PAGE.'&action=delete&_id='.$entry['filter_id'].'">del</a></td>
+			</tr>';
+		}
+	}
+	?>
+	</tbody>
+</table>
+</div>
+<br>
+</fieldset>
+
+</div>
+
+<?php include_once ('templates/section_footer.phtml'); ?>

@@ -1,0 +1,34 @@
+<?php include_once ('templates/section_head.phtml'); ?>
+
+<script type="text/javascript">
+function forward_delete() {
+	location.href = "<?php echo $base_url . '?page='.FORWARDING_PAGE.'&action=delete'?>";
+}
+</script>
+<div id="prefs-title" class="boxtitle"><?php echo _('isp_forward')?></div>
+<form name="forwardform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.FORWARDING_PAGE?>" method="post">
+<div id="prefs-details">
+<fieldset><legend><?php echo _('isp_forward')?> ::: <?php echo $username?></legend> <br>
+<table>
+	<tbody>
+		<tr>
+			<td class="title"><label for="forwardingaddress"><?php echo _('forwardingaddress')?></label>:</td>
+			<td><input name="_forwardingaddress" id="forwardingaddress" size="40" type="text" value="<?php echo $destination?>" /></td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<div class="footerleft">
+<input value="<?php echo $save?>" type="submit" />
+<?php 
+if (!empty($destination)) {
+	echo '&nbsp;<input type="button" onclick="forward_delete();" value="'.ucfirst($delete).'" />';
+}
+?>
+</div>
+</fieldset>
+</div>
+
+</form>
+
+<?php include_once ('templates/section_footer.phtml'); ?>

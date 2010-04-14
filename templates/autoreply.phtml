@@ -1,0 +1,69 @@
+<?php include_once ('templates/section_head.phtml'); ?>
+
+<script type="text/javascript">
+function getElementsByClassName(strClassName, obj)
+{
+	var ar = arguments[2] || new Array();
+    var re = new RegExp("\\b" + strClassName + "\\b", "g");
+
+    if ( re.test(obj.className) ) {
+        ar.push( obj );
+    }
+    for ( var i = 0; i < obj.childNodes.length; i++ )
+        getElementsByClassName( strClassName, obj.childNodes[i], ar );
+    
+    return ar;
+}
+
+function dates_reset() 
+{
+	if (document.autoreplyform._autoreplyenabled.checked == false) 
+	{
+		var dates = getElementsByClassName('selectInput', document.body);
+		for (i = 0; i < dates.length; i++)
+		{
+			var telem = dates[i];
+			for (j = 0; j < telem.length; j++)
+			{
+				if (telem[j].value == '-') {
+					telem.selectedIndex = j;
+				}
+			}
+		}
+	}
+}
+</script>
+<div id="prefs-title" class="boxtitle"><?php echo _('isp_autoreply')?></div>
+<form name="autoreplyform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.AUTOREPLY_PAGE?>" method="post">
+<div id="prefs-details">
+<fieldset><legend><?php echo _('isp_autoreply')?> ::: <?php echo $username?></legend> <br />
+<table>
+	<tbody>
+		<tr>
+			<td class="title" valign="top"><label for="autoreplybody"><?php echo _('autoreplymessage')?></label>:</td>
+			<td><textarea name="_autoreplybody" id="autoreplybody" cols="48" rows="15"><?php echo $autoresponder_text?></textarea></td>
+		</tr>
+		<tr>
+			<td valign="top" class="title"><label for="autoreplyenabled"><?php echo _('autoreplyenabled')?></label>:</td>
+			<td>
+			<input name="_autoreplyenabled" id="autoreplyenabled" value="1" onclick="dates_reset();" type="checkbox" <?php echo $autoreplyenabled?> />&nbsp;<?php echo _('and')?><br />
+			<p style="margin-bottom: 3px;width:360px">
+					  <label class="date-label" for="_autoresponder_start_date[day]"><?php echo _('autoreplystarton')?></label>
+					  <?php echo ispc_getDateTimeHTML('_autoresponder_start_date', $autoresponder_start_date)?></p>
+					  <label class="date-label" for="autoresponder_end_date[day]"><?php echo _('autoreplyendby')?></label>
+					  <?php echo ispc_getDateTimeHTML('_autoresponder_end_date', $autoresponder_end_date)?>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+</fieldset>
+
+</div>
+
+<div id="formfooter">
+<div class="footerleft"><input value="<?php echo $save?>" type="submit" /></div>
+</div>
+</form>
+
+<?php include_once ('templates/section_footer.phtml'); ?>

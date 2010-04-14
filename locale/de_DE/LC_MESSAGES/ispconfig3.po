@@ -1,0 +1,261 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR THE COPYRIGHT-HOLDER
+# This file is distributed under the same license as the SITE site.
+# FIRST AUTHOR <EMAIL ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SITE VERSION\n"
+"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
+"Language-Team: LANGUAGE <LL li org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "isp_filter"
+msgstr "Mail Filter"
+
+#, php-format
+msgid "filtername"
+msgstr "Name"
+
+#, php-format
+msgid "filtersource"
+msgstr "Quelle"
+
+#, php-format
+msgid "filtersubject"
+msgstr "Betreff"
+
+#, php-format
+msgid "filterfrom"
+msgstr "Von"
+
+#, php-format
+msgid "filterto"
+msgstr "Zu"
+
+#, php-format
+msgid "filtercontains"
+msgstr "Beinhaltet"
+
+#, php-format
+msgid "filteris"
+msgstr "Ist"
+
+#, php-format
+msgid "filterbegins"
+msgstr "Beginnt"
+
+#, php-format
+msgid "filterends"
+msgstr "Endet"
+
+#, php-format
+msgid "filteraction"
+msgstr "Aktion"
+
+#, php-format
+msgid "filtermove"
+msgstr "Verschieben"
+
+#, php-format
+msgid "filterdelete"
+msgstr "L&ouml;schen"
+
+#, php-format
+msgid "filterenabled"
+msgstr "Aktivieren"
+
+#, php-format
+msgid "filteradd"
+msgstr "Hinzufügen"
+
+#, php-format
+msgid "filternorules"
+msgstr "Es exisitieren keine Regeln"
+
+#, php-format
+msgid "filter_entries"
+msgstr "Regeln"
+
+#, php-format
+msgid "filterdelconfirm"
+msgstr "Wollen Sie diese Regel wirklich l&ouml;schen?"
+
+#, php-format
+msgid "filterlimitreached"
+msgstr "Limit erreicht"
+
+#, php-format
+msgid "textempty"
+msgstr "Bitte Nachricht eingeben"
+
+#, php-format
+msgid "forwarding"
+msgstr "Weiterleitung"
+
+#, php-format
+msgid "invalidaddress"
+msgstr "UngÃ¼ltige Adresse"
+
+#, php-format
+msgid "forwardingaddress"
+msgstr "Zieladresse"
+
+#, php-format
+msgid "forwardingenabled"
+msgstr "Aktivieren"
+
+#, php-format
+msgid "forwardingempty"
+msgstr "Bitte geben Sie eine Zieladresse ein"
+
+#, php-format
+msgid "forwardingloop"
+msgstr "Weiterleitung verursacht eine Schleife"
+
+#, php-format
+msgid "fetchmail"
+msgstr "Fetchmail"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Typ"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "POP3/IMAP Server"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Mails nach Empfang l&ouml;schen"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Aktivieren"
+
+#, php-format
+msgid "nofetch"
+msgstr "Keine Eintr&auml;ge vorhanden"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Vorhandene Eintr&auml;ge"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Wollen Sie diesen Eintrag wirklich l&ouml;schen?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Limit erreicht"
+
+#, php-format
+msgid "isp_acc"
+msgstr "Konto"
+
+#, php-format
+msgid "isp_alias"
+msgstr "Verkn&uuml;pfte Emailadresse(n)"
+
+#, php-format
+msgid "isp_general"
+msgstr "Allgemein"
+
+#, php-format
+msgid "isp_pass"
+msgstr "Passwort"
+
+#, php-format
+msgid "isp_forward"
+msgstr "Weiterleitung"
+
+#, php-format
+msgid "isp_fetchmail"
+msgstr "Fetchmail"
+
+#, php-format
+msgid "isp_autoreply"
+msgstr "Automatische Nachricht"
+
+#, php-format
+msgid "lastlogin"
+msgstr "Letztes Login"
+
+#, php-format
+msgid "defaultidentity"
+msgstr "Standard-Absender"
+
+#, php-format
+msgid "noalias"
+msgstr "Keine Verkn&uuml;pfte Emailadresse vorhanden"
+
+#, php-format
+msgid "password"
+msgstr "Passwort"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Passwort &auml;ndern"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Altes Passwort:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Neues Passwort:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Neues Passwort best&auml;tigen:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Bitte geben Sie ein neues Passwort ein."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Bitte geben Sie Ihr altes Passwort ein."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Das Passwort ist nicht richtig."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Das Passwort stimmt nich &uuml;berein. Bitte versuchen Sie es nochmal again."
+
+#, php-format
+msgid "internalerror"
+msgstr "Der Server hat mehrere Datenbankeintr&auml;ge aktualisiert - Kontaktieren Sie den System Administrator."
+
+#, php-format
+msgid "errorsaving"
+msgstr "Das neue Passwort konnte nicht gespeichert werden - Kontaktieren Sie den System Administrator."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "Das neue Passwort ist zu kurz (Mindestl&auml;nge ist %d Zeichen)."
+
+#, php-format
+msgid "autoreply"
+msgstr "Automatische Nachricht"
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "Nachricht"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Aktivieren"
+
+#, php-format
+msgid "and"
+msgstr "und"
+

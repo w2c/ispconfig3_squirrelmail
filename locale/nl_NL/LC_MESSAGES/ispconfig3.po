@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR THE COPYRIGHT-HOLDER
+# This file is distributed under the same license as the SITE site.
+# FIRST AUTHOR <EMAIL ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SITE VERSION\n"
+"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
+"Language-Team: LANGUAGE <LL li org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "isp_filter"
+msgstr "Mail Filter"
+
+#, php-format
+msgid "filtername"
+msgstr "Naam"
+
+#, php-format
+msgid "filtersource"
+msgstr "Bron"
+
+#, php-format
+msgid "filtersubject"
+msgstr "Onderwerp"
+
+#, php-format
+msgid "filterfrom"
+msgstr "Van"
+
+#, php-format
+msgid "filterto"
+msgstr "Naar"
+
+#, php-format
+msgid "filtercontains"
+msgstr "Bevat"
+
+#, php-format
+msgid "filteris"
+msgstr "Is"
+
+#, php-format
+msgid "filterbegins"
+msgstr "Begint"
+
+#, php-format
+msgid "filterends"
+msgstr "Eindigt"
+
+#, php-format
+msgid "filteraction"
+msgstr "Actie"
+
+#, php-format
+msgid "filtermove"
+msgstr "Verplaatsen"
+
+#, php-format
+msgid "filterdelete"
+msgstr "Verwijderen"
+
+#, php-format
+msgid "filterenabled"
+msgstr "Ingeschakeld"
+
+#, php-format
+msgid "filteradd"
+msgstr "Toevoegen"
+
+#, php-format
+msgid "filternorules"
+msgstr "Geen regels gevonden"
+
+#, php-format
+msgid "filter_entries"
+msgstr "Regels"
+
+#, php-format
+msgid "filterdelconfirm"
+msgstr "Deze regel verwijderen?"
+
+#, php-format
+msgid "filterlimitreached"
+msgstr "Limiet bereikt"
+
+#, php-format
+msgid "textempty"
+msgstr "Vul a.u.b. een bericht in."
+
+#, php-format
+msgid "fetchmail"
+msgstr "Extern mailaccount"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Type"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "POP3/IMAP Server"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Mail van server verwijderen na ophalen"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Ingeschakeld"
+
+#, php-format
+msgid "nofetch"
+msgstr "Geen externe mailaccounts beschikbaar"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Beschikbare mailaccounts"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Dit externe mailaccount verwijderen?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Limiet bereikt"
+
+#, php-format
+msgid "isp_acc"
+msgstr "Account"
+
+#, php-format
+msgid "isp_alias"
+msgstr "Verbonden e-mailadressen"
+
+#, php-format
+msgid "isp_general"
+msgstr "Algemeen"
+
+#, php-format
+msgid "isp_pass"
+msgstr "Wachtwoord"
+
+#, php-format
+msgid "isp_forward"
+msgstr "Doorsturen"
+
+#, php-format
+msgid "isp_fetchmail"
+msgstr "Extern mailaccount"
+
+#, php-format
+msgid "isp_autoreply"
+msgstr "Autobeantwoorden"
+
+#, php-format
+msgid "lastlogin"
+msgstr "Laatste keer ingelogd:"
+
+#, php-format
+msgid "defaultidentity"
+msgstr "Standaard identiteit"
+
+#, php-format
+msgid "noalias"
+msgstr "Geen e-mailadressen verbonden"
+
+#, php-format
+msgid "password"
+msgstr "Wachtwoord"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Wachtwoord veranderen"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Huidig wachtwoord:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nieuw wachtwoord:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Bevestig nieuw wachtwoord:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Vul a.u.b. nieuw wachtwoord in."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Vul a.u.b. het huidige wachtwoord in."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Huidig wachtwoord is onjuist."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Nieuw wachtwoord komt niet overeen met controleveld."
+
+#, php-format
+msgid "internalerror"
+msgstr "De server heeft meer dan een records in de database aangepast. Dit kan negatieve gevolgen hebben voor alle gebruikers van de server. Neem contact op met de serveradministrator."
+
+#, php-format
+msgid "errorsaving"
+msgstr "Kan het nieuwe wachtwoord niet opslaan, neem contact op met de serveradministrator."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "Wachtwoord is te kort: %d tekens vereist."
+
+#, php-format
+msgid "autoreply"
+msgstr "Autobeantwoorden"
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "Berichtinhoud"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Ingeschakeld"
+
+#, php-format
+msgid "and"
+msgstr "en"
+

@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR THE COPYRIGHT-HOLDER
+# This file is distributed under the same license as the SITE site.
+# FIRST AUTHOR <EMAIL ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SITE VERSION\n"
+"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
+"Language-Team: LANGUAGE <LL li org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "isp_filter"
+msgstr "Mailfilter"
+
+#, php-format
+msgid "filtername"
+msgstr "Namn"
+
+#, php-format
+msgid "filtersource"
+msgstr "Regel"
+
+#, php-format
+msgid "filtersubject"
+msgstr "&Auml;mnet"
+
+#, php-format
+msgid "filterfrom"
+msgstr "Fr&aring;n"
+
+#, php-format
+msgid "filterto"
+msgstr "Till"
+
+#, php-format
+msgid "filtercontains"
+msgstr "inneh&aring;ller"
+
+#, php-format
+msgid "filteris"
+msgstr "&auml;r"
+
+#, php-format
+msgid "filterbegins"
+msgstr "b&ouml;rjar med"
+
+#, php-format
+msgid "filterends"
+msgstr "slutar med"
+
+#, php-format
+msgid "filteraction"
+msgstr "M&aring;l"
+
+#, php-format
+msgid "filtermove"
+msgstr "Flytta"
+
+#, php-format
+msgid "filterdelete"
+msgstr "Radera"
+
+#, php-format
+msgid "filterenabled"
+msgstr "Aktiverad"
+
+#, php-format
+msgid "filteradd"
+msgstr "L&auml;gg till"
+
+#, php-format
+msgid "filternorules"
+msgstr "Inga regler funna"
+
+#, php-format
+msgid "filter_entries"
+msgstr "Tillg&auml;ngliga regler"
+
+#, php-format
+msgid "filterdelconfirm"
+msgstr "Vill du verkligen ta bort denna regel?"
+
+#, php-format
+msgid "filterlimitreached"
+msgstr "Begr&auml;nsning n&aring;dd"
+
+#, php-format
+msgid "textempty"
+msgstr "Skriv ett meddelande"
+
+#, php-format
+msgid "fetchmail"
+msgstr "Mailnerladdning"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Typ"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "POP3/IMAP-server"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Radera mail p&aring; servern"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Aktiverad"
+
+#, php-format
+msgid "nofetch"
+msgstr "Inga servrar konfigurerade"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Tillg&auml;ngliga servrar"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Vill du radera denna post?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Begr&auml;nsning n&aring;dd"
+
+#, php-format
+msgid "isp_acc"
+msgstr "Konto"
+
+#, php-format
+msgid "isp_alias"
+msgstr "L&auml;nkade mailkonton"
+
+#, php-format
+msgid "isp_general"
+msgstr "Generellt"
+
+#, php-format
+msgid "isp_pass"
+msgstr "L&ouml;senord"
+
+#, php-format
+msgid "isp_forward"
+msgstr "Vidarebefodring"
+
+#, php-format
+msgid "isp_fetchmail"
+msgstr "Extern mailserver"
+
+#, php-format
+msgid "isp_autoreply"
+msgstr "Autosvar"
+
+#, php-format
+msgid "lastlogin"
+msgstr "Senast inloggad"
+
+#, php-format
+msgid "defaultidentity"
+msgstr "Standardidentitet"
+
+#, php-format
+msgid "noalias"
+msgstr "Inga l&auml;nkade mailadresser"
+
+#, php-format
+msgid "password"
+msgstr "L&ouml;senord"
+
+#, php-format
+msgid "changepasswd"
+msgstr "&Auml;ndra l&ouml;senord"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Nuvarande l&ouml;senord:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nytt l&ouml;senord:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Bekr&auml;fta l&ouml;senord:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Ange ett nytt l&ouml;senord."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Ange nuvarande l&ouml;senord."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Nuvarande l&ouml;senord &auml;r felaktigt."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "De nya l&ouml;senorden st&auml;mmer inte &ouml;verrens."
+
+#, php-format
+msgid "internalerror"
+msgstr "Fler &auml;n en rad i databasen uppdateras. Detta kan vara skadligt f&ouml;r flera anv&auml;ndare. Kontakta systemadmin."
+
+#, php-format
+msgid "errorsaving"
+msgstr "Kunde inte &auml;ndra ditt l&ouml;senord. Kontakta serveradmin."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "L&ouml;senordet &auml;r f&ouml;r kort, minst %d tecken kr&auml;vs."
+
+#, php-format
+msgid "autoreply"
+msgstr "Autosvar"
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "Meddelande"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Aktiverad"
+
+#, php-format
+msgid "and"
+msgstr "och"
+

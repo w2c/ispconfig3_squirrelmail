@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR THE COPYRIGHT-HOLDER
+# This file is distributed under the same license as the SITE site.
+# FIRST AUTHOR <EMAIL ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SITE VERSION\n"
+"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
+"Language-Team: LANGUAGE <LL li org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "fetchmail"
+msgstr "Récupération de compte externe"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Protocole"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "Serveur POP3/IMAP"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Supprimer les messages après réception"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Activer"
+
+#, php-format
+msgid "nofetch"
+msgstr "Aucune entrée disponible"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Entrées disponible"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Etes-vous sûr de vouloir supprimer cette entrée?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Limite atteinte"
+
+#, php-format
+msgid "textempty"
+msgstr "Merci de saisir un message"
+
+#, php-format
+msgid "isp_acc"
+msgstr "Compte"
+
+#, php-format
+msgid "isp_alias"
+msgstr "Adresse(s) email(s) liée(s)"
+
+#, php-format
+msgid "isp_general"
+msgstr "Général"
+
+#, php-format
+msgid "isp_pass"
+msgstr "Mot de passe"
+
+#, php-format
+msgid "isp_forward"
+msgstr "Transfert"
+
+#, php-format
+msgid "isp_fetchmail"
+msgstr "Récupération de compte"
+
+#, php-format
+msgid "isp_autoreply"
+msgstr "Réponse automatique"
+
+#, php-format
+msgid "isp_filter"
+msgstr "Filtrage des mails"
+
+#, php-format
+msgid "lastlogin"
+msgstr "Dernière connexion"
+
+#, php-format
+msgid "defaultidentity"
+msgstr "Identité par défaut"
+
+#, php-format
+msgid "noalias"
+msgstr "Aucune adresse email liée"
+
+#, php-format
+msgid "password"
+msgstr "Mot de passe"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Changer le mot de passe"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Mot de passe actuel:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nouveau mot de passe:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Confirmer le mot de passe:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Merci de saisir le nouveau mot de passe."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Merci de saisir votre mot de passe actuel."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Le mot de passe actuel est incorrect."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Les mots de passe ne sont pas identiques, veuillez réessayer"
+
+#, php-format
+msgid "internalerror"
+msgstr "Une erreur interne s'est produite durant la mise à jour de votre mot de passe. Contactez votre administrateur système."
+
+#, php-format
+msgid "errorsaving"
+msgstr "Impossible de mettre à jour votre mot de passe. Contactez votre administrateur système."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "Le mot de passe est trop court: %d caractères requis."
+
+#, php-format
+msgid "autoreply"
+msgstr "Réponse automatique"
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "Message"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Activer"
+
+#, php-format
+msgid "and"
+msgstr "et"
+

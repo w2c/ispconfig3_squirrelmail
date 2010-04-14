@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR THE COPYRIGHT-HOLDER
+# This file is distributed under the same license as the SITE site.
+# FIRST AUTHOR <EMAIL ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SITE VERSION\n"
+"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
+"Language-Team: LANGUAGE <LL li org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "isp_filter"
+msgstr "Filtro de Correio"
+
+#, php-format
+msgid "filtername"
+msgstr "Nome"
+
+#, php-format
+msgid "filtersource"
+msgstr "Origem"
+
+#, php-format
+msgid "filtersubject"
+msgstr "Assunto"
+
+#, php-format
+msgid "filterfrom"
+msgstr "De"
+
+#, php-format
+msgid "filterto"
+msgstr "Para"
+
+#, php-format
+msgid "filtercontains"
+msgstr "Contém"
+
+#, php-format
+msgid "filteris"
+msgstr "é"
+
+#, php-format
+msgid "filterbegins"
+msgstr "Começa com"
+
+#, php-format
+msgid "filterends"
+msgstr "Termina com"
+
+#, php-format
+msgid "filteraction"
+msgstr "Ação"
+
+#, php-format
+msgid "filtermove"
+msgstr "Mover"
+
+#, php-format
+msgid "filterdelete"
+msgstr "Deletar"
+
+#, php-format
+msgid "filterenabled"
+msgstr "Ativar"
+
+#, php-format
+msgid "filteradd"
+msgstr "Adcionar"
+
+#, php-format
+msgid "filternorules"
+msgstr "Sem regras existentes"
+
+#, php-format
+msgid "filter_entries"
+msgstr "Regras"
+
+#, php-format
+msgid "filterdelconfirm"
+msgstr "Você está certo de remover esta regra?"
+
+#, php-format
+msgid "filterlimitreached"
+msgstr "Limite atingido"
+
+#, php-format
+msgid "textempty"
+msgstr "Por favor digite uma mensagem"
+
+#, php-format
+msgid "fetchmail"
+msgstr "Baixar Mensagens"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Tipo"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "Servidor POP3/IMAP"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Deletar mensagens após o recebimento"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Ativar"
+
+#, php-format
+msgid "nofetch"
+msgstr "Sem contas disponíveis"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Contas disponíveis"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Você confirma a remoção desta conta?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Limite Atingido"
+
+#, php-format
+msgid "isp_acc"
+msgstr "Conta"
+
+#, php-format
+msgid "isp_alias"
+msgstr "Endereços de Correio Lincados"
+
+#, php-format
+msgid "isp_general"
+msgstr "Geral"
+
+#, php-format
+msgid "isp_pass"
+msgstr "Senha"
+
+#, php-format
+msgid "isp_forward"
+msgstr "Encaminhamento"
+
+#, php-format
+msgid "isp_autoreply"
+msgstr "Autoresponder"
+
+#, php-format
+msgid "isp_fetchmail"
+msgstr "Fetchmail"
+
+#, php-format
+msgid "lastlogin"
+msgstr "Último Login"
+
+#, php-format
+msgid "defaultidentity"
+msgstr "Identidade Padrão"
+
+#, php-format
+msgid "noalias"
+msgstr "Endereços de correio não lincados"
+
+#, php-format
+msgid "password"
+msgstr "Senha"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Atualizar Senha"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Senha Atual:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nova Senha:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Confirmação de Senha:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Por favor informe uma nova senha."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Por favor informe sua senha atual."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Sua senha atual está incorreta."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Senha inconsistente, tente novamente."
+
+#, php-format
+msgid "internalerror"
+msgstr "O servidor atualizou mais de uma linha no banco de dados. Isto pode ser ruim para todos os usuários. Entre em contato com seu administrador de sistema urgentemente."
+
+#, php-format
+msgid "errorsaving"
+msgstr "Não pude salvar sua nova senha no banco de dados. Contate seu administrador."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "Sua senha esta muito curta: são requeridos pelo menso %d digitos."
+
+#, php-format
+msgid "autoreply"
+msgstr "Autoresponder"
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "Mensagem"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Ativado"
+
+#, php-format
+msgid "and"
+msgstr "e"
+

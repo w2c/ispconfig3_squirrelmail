@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR THE COPYRIGHT-HOLDER
+# This file is distributed under the same license as the SITE site.
+# FIRST AUTHOR <EMAIL ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SITE VERSION\n"
+"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
+"Language-Team: LANGUAGE <LL li org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "isp_filter"
+msgstr "Filtros de Correo"
+
+#, php-format
+msgid "filtername"
+msgstr "Nombre"
+
+#, php-format
+msgid "filtersource"
+msgstr "Fuente"
+
+#, php-format
+msgid "filtersubject"
+msgstr "Tema"
+
+#, php-format
+msgid "filterfrom"
+msgstr "De"
+
+#, php-format
+msgid "filterto"
+msgstr "Para"
+
+#, php-format
+msgid "filtercontains"
+msgstr "Contiene"
+
+#, php-format
+msgid "filteris"
+msgstr "Es"
+
+#, php-format
+msgid "filterbegins"
+msgstr "Empieza"
+
+#, php-format
+msgid "filterends"
+msgstr "Termina"
+
+#, php-format
+msgid "filteraction"
+msgstr "Acci&oacute;n"
+
+#, php-format
+msgid "filtermove"
+msgstr "Mover"
+
+#, php-format
+msgid "filterdelete"
+msgstr "Borrar"
+
+#, php-format
+msgid "filterenabled"
+msgstr "Activo"
+
+#, php-format
+msgid "filteradd"
+msgstr "Agregar"
+
+#, php-format
+msgid "filternorules"
+msgstr "No existe ninguna regla"
+
+#, php-format
+msgid "filter_entries"
+msgstr "Reglas"
+
+#, php-format
+msgid "filterdelconfirm"
+msgstr "Est&aacute; seguro de que quiere borrar esta regla?"
+
+#, php-format
+msgid "filterlimitreached"
+msgstr "Limite m&aacute;ximo alcalzado"
+
+#, php-format
+msgid "textempty"
+msgstr "Favor escriba su mensaje"
+
+#, php-format
+msgid "fetchmail"
+msgstr "Correo Externo"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Tipo"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "Servidor POP3/IMAP"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Borrar mensajes despu&eacute;s de recibidos"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Activo"
+
+#, php-format
+msgid "nofetch"
+msgstr "No hay Datos"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Datos de la Cuenta"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Desea borrar esta cuenta?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Sobre el Limite"
+
+#, php-format
+msgid "isp_acc"
+msgstr "Cuenta"
+
+#, php-format
+msgid "isp_alias"
+msgstr "Cuentas de correo ligadas a"
+
+#, php-format
+msgid "isp_general"
+msgstr "General"
+
+#, php-format
+msgid "isp_pass"
+msgstr "Contrase&ntilde;a"
+
+#, php-format
+msgid "isp_forward"
+msgstr "Reenvio"
+
+#, php-format
+msgid "isp_fetchmail"
+msgstr "Correo Externo"
+
+#, php-format
+msgid "isp_autoreply"
+msgstr "Autorespuesta"
+
+#, php-format
+msgid "lastlogin"
+msgstr "Ultima Sesi&oacute;n"
+
+#, php-format
+msgid "defaultidentity"
+msgstr "Identidad Predeterminada"
+
+#, php-format
+msgid "noalias"
+msgstr "No tiene cuentas de correo ligadas"
+
+#, php-format
+msgid "password"
+msgstr "Contrase&ntilde;a"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Cambio Contrase&ntilde;a"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Contrase&ntilde;a Actual"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nueva Contrase&ntilde;a:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Confirmaci&oacute;n de Contrase&ntilde;a:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Favor escriba la nueva contrase&ntilde;a."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Favor escriba la contrase&ntilde;a actual."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Contrase&ntilde;a actual esta incorrecta."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Inconsistencia de las contrase&ntilde;a, intente nuevamente."
+
+#, php-format
+msgid "internalerror"
+msgstr "El servidor actualizo m&aacute;s de una fila en la base de datos. Esto puede ser un problema para todos los usuarios. Favor contactar al administrador del sistema."
+
+#, php-format
+msgid "errorsaving"
+msgstr "No se pudo guardar la nueva contrase&ntilde;a en la base de datos. Favor contactar al administrador del sistema."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "La contrase&ntilde;a es muy corta: %d digitos requeridos."
+
+#, php-format
+msgid "autoreply"
+msgstr "Autorespuesta"
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "Mensaje"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Activo"
+
+#, php-format
+msgid "and"
+msgstr "y"
+
