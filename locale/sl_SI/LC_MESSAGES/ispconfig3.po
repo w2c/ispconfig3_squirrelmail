@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SITE VERSION\n"
-"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"POT-Creation-Date: Mon, 04 Oct 2010 15:29:34 +0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
 "Language-Team: LANGUAGE <LL li org>\n"
@@ -16,8 +16,108 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #, php-format
-msgid "fetchmail"
+msgid "acc_acc"
+msgstr "Račun"
+
+#, php-format
+msgid "acc_alias"
+msgstr "Povezani e-poštni naslov(i)"
+
+#, php-format
+msgid "acc_general"
+msgstr "Splošno"
+
+#, php-format
+msgid "acc_pass"
+msgstr "Sprememba gesla"
+
+#, php-format
+msgid "acc_forward"
+msgstr "Posredovanje"
+
+#, php-format
+msgid "acc_fetchmail"
 msgstr "Pograbi pošto"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "Odzivnik"
+
+#, php-format
+msgid "acc_filter"
+msgstr "Filter pošte"
+
+#, php-format
+msgid "acc_wblist"
+msgstr "White/Black List"
+
+#, php-format
+msgid "acc_lastlogin"
+msgstr "Zadnja prijava"
+
+#, php-format
+msgid "acc_defaultidentity"
+msgstr "Privzeta identiteta"
+
+#, php-format
+msgid "acc_noalias"
+msgstr "Ni povezanih e-poštnih naslovov"
+
+#, php-format
+msgid "password"
+msgstr "Sprememba gesla"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Spremeni geslo"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Trenutno geslo:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Novo geslo:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Potrditev novega gesla:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Prosimo, vnesite novo geslo."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Prosimo, vnesite trenutno geslo."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Trenutno geslo ni pravilno."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Gesla se ne ujemata, poizkusite znova."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "Geslo je prekratko: vsaj %d znakov."
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "Sporočilo"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Vklopljen"
+
+#, php-format
+msgid "and"
+msgstr "in"
+
+#, php-format
+msgid "textempty"
+msgstr "Eden ali več polj je praznih"
 
 #, php-format
 msgid "fetchmailtyp"
@@ -58,116 +158,4 @@ msgstr "Ali želite izbrisati ta zapis?"
 #, php-format
 msgid "fetchmaillimitreached"
 msgstr "Dosežen limit"
-
-#, php-format
-msgid "textempty"
-msgstr "Prosimo, vnesite sporočilo za odzivnik"
-
-#, php-format
-msgid "isp_acc"
-msgstr "Račun"
-
-#, php-format
-msgid "isp_alias"
-msgstr "Povezani e-poštni naslov(i)"
-
-#, php-format
-msgid "isp_general"
-msgstr "Splošno"
-
-#, php-format
-msgid "isp_pass"
-msgstr "Sprememba gesla"
-
-#, php-format
-msgid "isp_forward"
-msgstr "Posredovanje"
-
-#, php-format
-msgid "isp_fetchmail"
-msgstr "Pograbi pošto"
-
-#, php-format
-msgid "isp_autoreply"
-msgstr "Odzivnik"
-
-#, php-format
-msgid "isp_filter"
-msgstr "Filter pošte"
-
-#, php-format
-msgid "lastlogin"
-msgstr "Zadnja prijava"
-
-#, php-format
-msgid "defaultidentity"
-msgstr "Privzeta identiteta"
-
-#, php-format
-msgid "noalias"
-msgstr "Ni povezanih e-poštnih naslovov"
-
-#, php-format
-msgid "password"
-msgstr "Sprememba gesla"
-
-#, php-format
-msgid "changepasswd"
-msgstr "Spremeni geslo"
-
-#, php-format
-msgid "curpasswd"
-msgstr "Trenutno geslo:"
-
-#, php-format
-msgid "newpasswd"
-msgstr "Novo geslo:"
-
-#, php-format
-msgid "confpasswd"
-msgstr "Potrditev novega gesla:"
-
-#, php-format
-msgid "nopassword"
-msgstr "Prosimo, vnesite novo geslo."
-
-#, php-format
-msgid "nocurpassword"
-msgstr "Prosimo, vnesite trenutno geslo."
-
-#, php-format
-msgid "passwordincorrect"
-msgstr "Trenutno geslo ni pravilno."
-
-#, php-format
-msgid "passwordinconsistency"
-msgstr "Gesla se ne ujemata, poizkusite znova."
-
-#, php-format
-msgid "internalerror"
-msgstr "The server is updated more than one row in the database. This could be bad for all users. Contact your system adminstrator."
-
-#, php-format
-msgid "errorsaving"
-msgstr "Could not save your new password to the database. Contact your system adminstrator."
-
-#, php-format
-msgid "passwordminlength"
-msgstr "Geslo je prekratko: vsaj %d znakov."
-
-#, php-format
-msgid "autoreply"
-msgstr "Odzivnik"
-
-#, php-format
-msgid "autoreplymessage"
-msgstr "Sporočilo"
-
-#, php-format
-msgid "autoreplyenabled"
-msgstr "Vklopljen"
-
-#, php-format
-msgid "and"
-msgstr "in"
 

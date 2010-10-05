@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SITE VERSION\n"
-"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"POT-Creation-Date: Mon, 04 Oct 2010 15:29:33 +0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
 "Language-Team: LANGUAGE <LL li org>\n"
@@ -16,8 +16,176 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #, php-format
-msgid "isp_filter"
+msgid "acc_acc"
+msgstr "Conta"
+
+#, php-format
+msgid "acc_alias"
+msgstr "Endere√ßos de Correio Lincados"
+
+#, php-format
+msgid "acc_general"
+msgstr "Geral"
+
+#, php-format
+msgid "acc_pass"
+msgstr "Senha"
+
+#, php-format
+msgid "acc_forward"
+msgstr "Encaminhamento"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "Autoresponder"
+
+#, php-format
+msgid "acc_fetchmail"
+msgstr "Fetchmail"
+
+#, php-format
+msgid "acc_filter"
 msgstr "Filtro de Correio"
+
+#, php-format
+msgid "acc_wblist"
+msgstr "Lista Negra/Branca"
+
+#, php-format
+msgid "acc_lastlogin"
+msgstr "√öltimo Login"
+
+#, php-format
+msgid "acc_defaultidentity"
+msgstr "Identidade Padr√£o"
+
+#, php-format
+msgid "acc_noalias"
+msgstr "Endere√ßos de correio n√£o lincados"
+
+#, php-format
+msgid "forwardingaddress"
+msgstr "Endere√ßo"
+
+#, php-format
+msgid "forwardingenabled"
+msgstr "Ativo"
+
+#, php-format
+msgid "forwardingloop"
+msgstr "Este encaminhamento ficar√° em loop"
+
+#, php-format
+msgid "forwardingempty"
+msgstr "Por favor entre com o endere√ßo de encaminhamento"
+
+#, php-format
+msgid "invalidaddress"
+msgstr "Endere√ßo de correio inv√°lido"
+
+#, php-format
+msgid "wblisttype"
+msgstr "Tip"
+
+#, php-format
+msgid "wblistwhitelist"
+msgstr "Lista Branca"
+
+#, php-format
+msgid "wblistblacklist"
+msgstr "Lista Negra"
+
+#, php-format
+msgid "wblistpriority"
+msgstr "Prioridade"
+
+#, php-format
+msgid "wblistenabled"
+msgstr "Ativa"
+
+#, php-format
+msgid "wblistentries"
+msgstr "Registros dispon√≠veis"
+
+#, php-format
+msgid "wblistnorules"
+msgstr "Sem registros"
+
+#, php-format
+msgid "wblistdelconfirm"
+msgstr "Est√° certo de remover este registro?"
+
+#, php-format
+msgid "wblimitreached"
+msgstr "Limite atingido"
+
+#, php-format
+msgid "textempty"
+msgstr "Um ou mais campos est√£o em branco."
+
+#, php-format
+msgid "policy_name"
+msgstr "Regra"
+
+#, php-format
+msgid "spammove"
+msgstr "Mover spams para o diret√≥rio SPAM"
+
+#, php-format
+msgid "policy_entries"
+msgstr "Regras de Spam Dispon√≠veis"
+
+#, php-format
+msgid "policy_tag"
+msgstr "Level Tag"
+
+#, php-format
+msgid "policy_kill"
+msgstr "Level Kill"
+
+#, php-format
+msgid "spamnopolicies"
+msgstr "N√£o existem regras definidas"
+
+#, php-format
+msgid "password"
+msgstr "Senha"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Atualizar Senha"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Senha Atual:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nova Senha:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Confirma√ß√£o de Senha:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Por favor informe uma nova senha."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Por favor informe sua senha atual."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Sua senha atual est√° incorreta."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Senha inconsistente, tente novamente."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "Sua senha esta muito curta: s√£o requeridos pelo menso %d digitos."
 
 #, php-format
 msgid "filtername"
@@ -41,15 +209,15 @@ msgstr "Para"
 
 #, php-format
 msgid "filtercontains"
-msgstr "ContÈm"
+msgstr "Cont√©m"
 
 #, php-format
 msgid "filteris"
-msgstr "È"
+msgstr "√©"
 
 #, php-format
 msgid "filterbegins"
-msgstr "ComeÁa com"
+msgstr "Come√ßa com"
 
 #, php-format
 msgid "filterends"
@@ -57,7 +225,7 @@ msgstr "Termina com"
 
 #, php-format
 msgid "filteraction"
-msgstr "AÁ„o"
+msgstr "A√ß√£o"
 
 #, php-format
 msgid "filtermove"
@@ -85,143 +253,11 @@ msgstr "Regras"
 
 #, php-format
 msgid "filterdelconfirm"
-msgstr "VocÍ est· certo de remover esta regra?"
+msgstr "Voc√™ est√° certo de remover esta regra?"
 
 #, php-format
 msgid "filterlimitreached"
 msgstr "Limite atingido"
-
-#, php-format
-msgid "textempty"
-msgstr "Por favor digite uma mensagem"
-
-#, php-format
-msgid "fetchmail"
-msgstr "Baixar Mensagens"
-
-#, php-format
-msgid "fetchmailtyp"
-msgstr "Tipo"
-
-#, php-format
-msgid "fetchmailserver"
-msgstr "Servidor POP3/IMAP"
-
-#, php-format
-msgid "fetchmaildelete"
-msgstr "Deletar mensagens apÛs o recebimento"
-
-#, php-format
-msgid "fetchmailenabled"
-msgstr "Ativar"
-
-#, php-format
-msgid "nofetch"
-msgstr "Sem contas disponÌveis"
-
-#, php-format
-msgid "fetchmail_entries"
-msgstr "Contas disponÌveis"
-
-#, php-format
-msgid "fetchmaildelconfirm"
-msgstr "VocÍ confirma a remoÁ„o desta conta?"
-
-#, php-format
-msgid "fetchmaillimitreached"
-msgstr "Limite Atingido"
-
-#, php-format
-msgid "isp_acc"
-msgstr "Conta"
-
-#, php-format
-msgid "isp_alias"
-msgstr "EndereÁos de Correio Lincados"
-
-#, php-format
-msgid "isp_general"
-msgstr "Geral"
-
-#, php-format
-msgid "isp_pass"
-msgstr "Senha"
-
-#, php-format
-msgid "isp_forward"
-msgstr "Encaminhamento"
-
-#, php-format
-msgid "isp_autoreply"
-msgstr "Autoresponder"
-
-#, php-format
-msgid "isp_fetchmail"
-msgstr "Fetchmail"
-
-#, php-format
-msgid "lastlogin"
-msgstr "⁄ltimo Login"
-
-#, php-format
-msgid "defaultidentity"
-msgstr "Identidade Padr„o"
-
-#, php-format
-msgid "noalias"
-msgstr "EndereÁos de correio n„o lincados"
-
-#, php-format
-msgid "password"
-msgstr "Senha"
-
-#, php-format
-msgid "changepasswd"
-msgstr "Atualizar Senha"
-
-#, php-format
-msgid "curpasswd"
-msgstr "Senha Atual:"
-
-#, php-format
-msgid "newpasswd"
-msgstr "Nova Senha:"
-
-#, php-format
-msgid "confpasswd"
-msgstr "ConfirmaÁ„o de Senha:"
-
-#, php-format
-msgid "nopassword"
-msgstr "Por favor informe uma nova senha."
-
-#, php-format
-msgid "nocurpassword"
-msgstr "Por favor informe sua senha atual."
-
-#, php-format
-msgid "passwordincorrect"
-msgstr "Sua senha atual est· incorreta."
-
-#, php-format
-msgid "passwordinconsistency"
-msgstr "Senha inconsistente, tente novamente."
-
-#, php-format
-msgid "internalerror"
-msgstr "O servidor atualizou mais de uma linha no banco de dados. Isto pode ser ruim para todos os usu·rios. Entre em contato com seu administrador de sistema urgentemente."
-
-#, php-format
-msgid "errorsaving"
-msgstr "N„o pude salvar sua nova senha no banco de dados. Contate seu administrador."
-
-#, php-format
-msgid "passwordminlength"
-msgstr "Sua senha esta muito curta: s„o requeridos pelo menso %d digitos."
-
-#, php-format
-msgid "autoreply"
-msgstr "Autoresponder"
 
 #, php-format
 msgid "autoreplymessage"
@@ -234,4 +270,36 @@ msgstr "Ativado"
 #, php-format
 msgid "and"
 msgstr "e"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Tipo"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "Servidor POP3/IMAP"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Deletar mensagens ap√≥s o recebimento"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Ativar"
+
+#, php-format
+msgid "nofetch"
+msgstr "Sem contas dispon√≠veis"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Contas dispon√≠veis"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Voc√™ confirma a remo√ß√£o desta conta?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Limite Atingido"
 

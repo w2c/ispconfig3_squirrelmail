@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SITE VERSION\n"
-"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"POT-Creation-Date: Mon, 04 Oct 2010 15:29:34 +0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
 "Language-Team: LANGUAGE <LL li org>\n"
@@ -16,8 +16,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #, php-format
-msgid "isp_filter"
+msgid "acc_acc"
+msgstr "Konto"
+
+#, php-format
+msgid "acc_alias"
+msgstr "L&auml;nkade mailkonton"
+
+#, php-format
+msgid "acc_general"
+msgstr "Generellt"
+
+#, php-format
+msgid "acc_pass"
+msgstr "L&ouml;senord"
+
+#, php-format
+msgid "acc_forward"
+msgstr "Vidarebefodring"
+
+#, php-format
+msgid "acc_fetchmail"
+msgstr "Extern mailserver"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "Autosvar"
+
+#, php-format
+msgid "acc_filter"
 msgstr "Mailfilter"
+
+#, php-format
+msgid "acc_wblist"
+msgstr "White/Black List"
+
+#, php-format
+msgid "acc_lastlogin"
+msgstr "Senast inloggad"
+
+#, php-format
+msgid "acc_defaultidentity"
+msgstr "Standardidentitet"
+
+#, php-format
+msgid "acc_noalias"
+msgstr "Inga l&auml;nkade mailadresser"
+
+#, php-format
+msgid "password"
+msgstr "L&ouml;senord"
+
+#, php-format
+msgid "changepasswd"
+msgstr "&Auml;ndra l&ouml;senord"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Nuvarande l&ouml;senord:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nytt l&ouml;senord:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Bekr&auml;fta l&ouml;senord:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Ange ett nytt l&ouml;senord."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Ange nuvarande l&ouml;senord."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Nuvarande l&ouml;senord &auml;r felaktigt."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "De nya l&ouml;senorden st&auml;mmer inte &ouml;verrens."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "L&ouml;senordet &auml;r f&ouml;r kort, minst %d tecken kr&auml;vs."
 
 #, php-format
 msgid "filtername"
@@ -93,11 +177,19 @@ msgstr "Begr&auml;nsning n&aring;dd"
 
 #, php-format
 msgid "textempty"
-msgstr "Skriv ett meddelande"
+msgstr "Ett eller flera f&auml;lt &auml;r tomma"
 
 #, php-format
-msgid "fetchmail"
-msgstr "Mailnerladdning"
+msgid "autoreplymessage"
+msgstr "Meddelande"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Aktiverad"
+
+#, php-format
+msgid "and"
+msgstr "och"
 
 #, php-format
 msgid "fetchmailtyp"
@@ -130,108 +222,4 @@ msgstr "Vill du radera denna post?"
 #, php-format
 msgid "fetchmaillimitreached"
 msgstr "Begr&auml;nsning n&aring;dd"
-
-#, php-format
-msgid "isp_acc"
-msgstr "Konto"
-
-#, php-format
-msgid "isp_alias"
-msgstr "L&auml;nkade mailkonton"
-
-#, php-format
-msgid "isp_general"
-msgstr "Generellt"
-
-#, php-format
-msgid "isp_pass"
-msgstr "L&ouml;senord"
-
-#, php-format
-msgid "isp_forward"
-msgstr "Vidarebefodring"
-
-#, php-format
-msgid "isp_fetchmail"
-msgstr "Extern mailserver"
-
-#, php-format
-msgid "isp_autoreply"
-msgstr "Autosvar"
-
-#, php-format
-msgid "lastlogin"
-msgstr "Senast inloggad"
-
-#, php-format
-msgid "defaultidentity"
-msgstr "Standardidentitet"
-
-#, php-format
-msgid "noalias"
-msgstr "Inga l&auml;nkade mailadresser"
-
-#, php-format
-msgid "password"
-msgstr "L&ouml;senord"
-
-#, php-format
-msgid "changepasswd"
-msgstr "&Auml;ndra l&ouml;senord"
-
-#, php-format
-msgid "curpasswd"
-msgstr "Nuvarande l&ouml;senord:"
-
-#, php-format
-msgid "newpasswd"
-msgstr "Nytt l&ouml;senord:"
-
-#, php-format
-msgid "confpasswd"
-msgstr "Bekr&auml;fta l&ouml;senord:"
-
-#, php-format
-msgid "nopassword"
-msgstr "Ange ett nytt l&ouml;senord."
-
-#, php-format
-msgid "nocurpassword"
-msgstr "Ange nuvarande l&ouml;senord."
-
-#, php-format
-msgid "passwordincorrect"
-msgstr "Nuvarande l&ouml;senord &auml;r felaktigt."
-
-#, php-format
-msgid "passwordinconsistency"
-msgstr "De nya l&ouml;senorden st&auml;mmer inte &ouml;verrens."
-
-#, php-format
-msgid "internalerror"
-msgstr "Fler &auml;n en rad i databasen uppdateras. Detta kan vara skadligt f&ouml;r flera anv&auml;ndare. Kontakta systemadmin."
-
-#, php-format
-msgid "errorsaving"
-msgstr "Kunde inte &auml;ndra ditt l&ouml;senord. Kontakta serveradmin."
-
-#, php-format
-msgid "passwordminlength"
-msgstr "L&ouml;senordet &auml;r f&ouml;r kort, minst %d tecken kr&auml;vs."
-
-#, php-format
-msgid "autoreply"
-msgstr "Autosvar"
-
-#, php-format
-msgid "autoreplymessage"
-msgstr "Meddelande"
-
-#, php-format
-msgid "autoreplyenabled"
-msgstr "Aktiverad"
-
-#, php-format
-msgid "and"
-msgstr "och"
 

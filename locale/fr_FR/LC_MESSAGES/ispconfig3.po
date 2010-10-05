@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SITE VERSION\n"
-"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"POT-Creation-Date: Mon, 04 Oct 2010 15:29:33 +0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
 "Language-Team: LANGUAGE <LL li org>\n"
@@ -16,87 +16,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #, php-format
-msgid "fetchmail"
-msgstr "Récupération de compte externe"
-
-#, php-format
-msgid "fetchmailtyp"
-msgstr "Protocole"
-
-#, php-format
-msgid "fetchmailserver"
-msgstr "Serveur POP3/IMAP"
-
-#, php-format
-msgid "fetchmaildelete"
-msgstr "Supprimer les messages après réception"
-
-#, php-format
-msgid "fetchmailenabled"
-msgstr "Activer"
-
-#, php-format
-msgid "nofetch"
-msgstr "Aucune entrée disponible"
-
-#, php-format
-msgid "fetchmail_entries"
-msgstr "Entrées disponible"
-
-#, php-format
-msgid "fetchmaildelconfirm"
-msgstr "Etes-vous sûr de vouloir supprimer cette entrée?"
-
-#, php-format
-msgid "fetchmaillimitreached"
-msgstr "Limite atteinte"
-
-#, php-format
-msgid "textempty"
-msgstr "Merci de saisir un message"
-
-#, php-format
-msgid "isp_acc"
+msgid "acc_acc"
 msgstr "Compte"
 
 #, php-format
-msgid "isp_alias"
+msgid "acc_alias"
 msgstr "Adresse(s) email(s) liée(s)"
 
 #, php-format
-msgid "isp_general"
+msgid "acc_general"
 msgstr "Général"
 
 #, php-format
-msgid "isp_pass"
+msgid "acc_pass"
 msgstr "Mot de passe"
 
 #, php-format
-msgid "isp_forward"
+msgid "acc_forward"
 msgstr "Transfert"
 
 #, php-format
-msgid "isp_fetchmail"
+msgid "acc_fetchmail"
 msgstr "Récupération de compte"
 
 #, php-format
-msgid "isp_autoreply"
+msgid "acc_autoreply"
 msgstr "Réponse automatique"
 
 #, php-format
-msgid "isp_filter"
+msgid "acc_filter"
 msgstr "Filtrage des mails"
 
 #, php-format
-msgid "lastlogin"
+msgid "acc_wblist"
+msgstr "White/Black List"
+
+#, php-format
+msgid "acc_lastlogin"
 msgstr "Dernière connexion"
 
 #, php-format
-msgid "defaultidentity"
+msgid "acc_defaultidentity"
 msgstr "Identité par défaut"
 
 #, php-format
-msgid "noalias"
+msgid "acc_noalias"
 msgstr "Aucune adresse email liée"
 
 #, php-format
@@ -136,20 +100,84 @@ msgid "passwordinconsistency"
 msgstr "Les mots de passe ne sont pas identiques, veuillez réessayer"
 
 #, php-format
-msgid "internalerror"
-msgstr "Une erreur interne s'est produite durant la mise à jour de votre mot de passe. Contactez votre administrateur système."
-
-#, php-format
-msgid "errorsaving"
-msgstr "Impossible de mettre à jour votre mot de passe. Contactez votre administrateur système."
-
-#, php-format
 msgid "passwordminlength"
 msgstr "Le mot de passe est trop court: %d caractères requis."
 
 #, php-format
-msgid "autoreply"
-msgstr "Réponse automatique"
+msgid "filtername"
+msgstr "Nom"
+
+#, php-format
+msgid "filtersource"
+msgstr "Source"
+
+#, php-format
+msgid "filtersubject"
+msgstr "Sujet"
+
+#, php-format
+msgid "filterfrom"
+msgstr "De"
+
+#, php-format
+msgid "filterto"
+msgstr "A"
+
+#, php-format
+msgid "filtercontains"
+msgstr "Contiens"
+
+#, php-format
+msgid "filteris"
+msgstr "Est"
+
+#, php-format
+msgid "filterbegins"
+msgstr "Commence par"
+
+#, php-format
+msgid "filterends"
+msgstr "Finit par"
+
+#, php-format
+msgid "filteraction"
+msgstr "Action"
+
+#, php-format
+msgid "filtermove"
+msgstr "D�placer"
+
+#, php-format
+msgid "filterdelete"
+msgstr "Supprimer"
+
+#, php-format
+msgid "filterenabled"
+msgstr "Activ�"
+
+#, php-format
+msgid "filteradd"
+msgstr "Ajouter"
+
+#, php-format
+msgid "filternorules"
+msgstr "Aucune r�gle existante"
+
+#, php-format
+msgid "filter_entries"
+msgstr "R�gles"
+
+#, php-format
+msgid "filterdelconfirm"
+msgstr "Etes-vous s�r de vouloir supprimer cette r�gle?"
+
+#, php-format
+msgid "filterlimitreached"
+msgstr "Limite atteinte"
+
+#, php-format
+msgid "textempty"
+msgstr "Un ou plusieurs champs sont vides"
 
 #, php-format
 msgid "autoreplymessage"
@@ -162,4 +190,36 @@ msgstr "Activer"
 #, php-format
 msgid "and"
 msgstr "et"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Protocole"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "Serveur POP3/IMAP"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Supprimer les messages après réception"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Activer"
+
+#, php-format
+msgid "nofetch"
+msgstr "Aucune entrée disponible"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Entrées disponible"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Etes-vous sûr de vouloir supprimer cette entrée?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Limite atteinte"
 

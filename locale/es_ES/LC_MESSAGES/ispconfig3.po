@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SITE VERSION\n"
-"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"POT-Creation-Date: Mon, 04 Oct 2010 15:29:33 +0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
 "Language-Team: LANGUAGE <LL li org>\n"
@@ -16,8 +16,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #, php-format
-msgid "isp_filter"
+msgid "acc_acc"
+msgstr "Cuenta"
+
+#, php-format
+msgid "acc_alias"
+msgstr "Cuentas de correo ligadas a"
+
+#, php-format
+msgid "acc_general"
+msgstr "General"
+
+#, php-format
+msgid "acc_pass"
+msgstr "Contrase&ntilde;a"
+
+#, php-format
+msgid "acc_forward"
+msgstr "Reenvio"
+
+#, php-format
+msgid "acc_fetchmail"
+msgstr "Correo Externo"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "Autorespuesta"
+
+#, php-format
+msgid "acc_filter"
 msgstr "Filtros de Correo"
+
+#, php-format
+msgid "acc_wblist"
+msgstr "Black/White List"
+
+#, php-format
+msgid "acc_lastlogin"
+msgstr "Ultima Sesi&oacute;n"
+
+#, php-format
+msgid "acc_defaultidentity"
+msgstr "Identidad Predeterminada"
+
+#, php-format
+msgid "acc_noalias"
+msgstr "No tiene cuentas de correo ligadas"
+
+#, php-format
+msgid "password"
+msgstr "Contrase&ntilde;a"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Cambio Contrase&ntilde;a"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Contrase&ntilde;a Actual"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nueva Contrase&ntilde;a:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Confirmaci&oacute;n de Contrase&ntilde;a:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Favor escriba la nueva contrase&ntilde;a."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Favor escriba la contrase&ntilde;a actual."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Contrase&ntilde;a actual esta incorrecta."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Inconsistencia de las contrase&ntilde;a, intente nuevamente."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "La contrase&ntilde;a es muy corta: %d digitos requeridos."
 
 #, php-format
 msgid "filtername"
@@ -93,11 +177,19 @@ msgstr "Limite m&aacute;ximo alcalzado"
 
 #, php-format
 msgid "textempty"
-msgstr "Favor escriba su mensaje"
+msgstr "Uno o m&aacute;s campos requeridos"
 
 #, php-format
-msgid "fetchmail"
-msgstr "Correo Externo"
+msgid "autoreplymessage"
+msgstr "Mensaje"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Activo"
+
+#, php-format
+msgid "and"
+msgstr "y"
 
 #, php-format
 msgid "fetchmailtyp"
@@ -130,108 +222,4 @@ msgstr "Desea borrar esta cuenta?"
 #, php-format
 msgid "fetchmaillimitreached"
 msgstr "Sobre el Limite"
-
-#, php-format
-msgid "isp_acc"
-msgstr "Cuenta"
-
-#, php-format
-msgid "isp_alias"
-msgstr "Cuentas de correo ligadas a"
-
-#, php-format
-msgid "isp_general"
-msgstr "General"
-
-#, php-format
-msgid "isp_pass"
-msgstr "Contrase&ntilde;a"
-
-#, php-format
-msgid "isp_forward"
-msgstr "Reenvio"
-
-#, php-format
-msgid "isp_fetchmail"
-msgstr "Correo Externo"
-
-#, php-format
-msgid "isp_autoreply"
-msgstr "Autorespuesta"
-
-#, php-format
-msgid "lastlogin"
-msgstr "Ultima Sesi&oacute;n"
-
-#, php-format
-msgid "defaultidentity"
-msgstr "Identidad Predeterminada"
-
-#, php-format
-msgid "noalias"
-msgstr "No tiene cuentas de correo ligadas"
-
-#, php-format
-msgid "password"
-msgstr "Contrase&ntilde;a"
-
-#, php-format
-msgid "changepasswd"
-msgstr "Cambio Contrase&ntilde;a"
-
-#, php-format
-msgid "curpasswd"
-msgstr "Contrase&ntilde;a Actual"
-
-#, php-format
-msgid "newpasswd"
-msgstr "Nueva Contrase&ntilde;a:"
-
-#, php-format
-msgid "confpasswd"
-msgstr "Confirmaci&oacute;n de Contrase&ntilde;a:"
-
-#, php-format
-msgid "nopassword"
-msgstr "Favor escriba la nueva contrase&ntilde;a."
-
-#, php-format
-msgid "nocurpassword"
-msgstr "Favor escriba la contrase&ntilde;a actual."
-
-#, php-format
-msgid "passwordincorrect"
-msgstr "Contrase&ntilde;a actual esta incorrecta."
-
-#, php-format
-msgid "passwordinconsistency"
-msgstr "Inconsistencia de las contrase&ntilde;a, intente nuevamente."
-
-#, php-format
-msgid "internalerror"
-msgstr "El servidor actualizo m&aacute;s de una fila en la base de datos. Esto puede ser un problema para todos los usuarios. Favor contactar al administrador del sistema."
-
-#, php-format
-msgid "errorsaving"
-msgstr "No se pudo guardar la nueva contrase&ntilde;a en la base de datos. Favor contactar al administrador del sistema."
-
-#, php-format
-msgid "passwordminlength"
-msgstr "La contrase&ntilde;a es muy corta: %d digitos requeridos."
-
-#, php-format
-msgid "autoreply"
-msgstr "Autorespuesta"
-
-#, php-format
-msgid "autoreplymessage"
-msgstr "Mensaje"
-
-#, php-format
-msgid "autoreplyenabled"
-msgstr "Activo"
-
-#, php-format
-msgid "and"
-msgstr "y"
 

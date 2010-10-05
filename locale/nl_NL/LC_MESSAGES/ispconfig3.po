@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SITE VERSION\n"
-"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"POT-Creation-Date: Mon, 04 Oct 2010 15:29:33 +0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
 "Language-Team: LANGUAGE <LL li org>\n"
@@ -16,8 +16,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #, php-format
-msgid "isp_filter"
+msgid "acc_acc"
+msgstr "Account"
+
+#, php-format
+msgid "acc_alias"
+msgstr "Verbonden e-mailadressen"
+
+#, php-format
+msgid "acc_general"
+msgstr "Algemeen"
+
+#, php-format
+msgid "acc_pass"
+msgstr "Wachtwoord"
+
+#, php-format
+msgid "acc_forward"
+msgstr "Doorsturen"
+
+#, php-format
+msgid "acc_fetchmail"
+msgstr "Extern mailaccount"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "Autobeantwoorden"
+
+#, php-format
+msgid "acc_filter"
 msgstr "Mail Filter"
+
+#, php-format
+msgid "acc_wblist"
+msgstr "White/Black List"
+
+#, php-format
+msgid "acc_lastlogin"
+msgstr "Laatste keer ingelogd:"
+
+#, php-format
+msgid "acc_defaultidentity"
+msgstr "Standaard identiteit"
+
+#, php-format
+msgid "acc_noalias"
+msgstr "Geen e-mailadressen verbonden"
+
+#, php-format
+msgid "password"
+msgstr "Wachtwoord"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Wachtwoord veranderen"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Huidig wachtwoord:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nieuw wachtwoord:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Bevestig nieuw wachtwoord:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Vul a.u.b. nieuw wachtwoord in."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Vul a.u.b. het huidige wachtwoord in."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Huidig wachtwoord is onjuist."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Nieuw wachtwoord komt niet overeen met controleveld."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "Wachtwoord is te kort: %d tekens vereist."
 
 #, php-format
 msgid "filtername"
@@ -93,11 +177,19 @@ msgstr "Limiet bereikt"
 
 #, php-format
 msgid "textempty"
-msgstr "Vul a.u.b. een bericht in."
+msgstr "Een of meer velden zijn leeg"
 
 #, php-format
-msgid "fetchmail"
-msgstr "Extern mailaccount"
+msgid "autoreplymessage"
+msgstr "Berichtinhoud"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Ingeschakeld"
+
+#, php-format
+msgid "and"
+msgstr "en"
 
 #, php-format
 msgid "fetchmailtyp"
@@ -130,108 +222,4 @@ msgstr "Dit externe mailaccount verwijderen?"
 #, php-format
 msgid "fetchmaillimitreached"
 msgstr "Limiet bereikt"
-
-#, php-format
-msgid "isp_acc"
-msgstr "Account"
-
-#, php-format
-msgid "isp_alias"
-msgstr "Verbonden e-mailadressen"
-
-#, php-format
-msgid "isp_general"
-msgstr "Algemeen"
-
-#, php-format
-msgid "isp_pass"
-msgstr "Wachtwoord"
-
-#, php-format
-msgid "isp_forward"
-msgstr "Doorsturen"
-
-#, php-format
-msgid "isp_fetchmail"
-msgstr "Extern mailaccount"
-
-#, php-format
-msgid "isp_autoreply"
-msgstr "Autobeantwoorden"
-
-#, php-format
-msgid "lastlogin"
-msgstr "Laatste keer ingelogd:"
-
-#, php-format
-msgid "defaultidentity"
-msgstr "Standaard identiteit"
-
-#, php-format
-msgid "noalias"
-msgstr "Geen e-mailadressen verbonden"
-
-#, php-format
-msgid "password"
-msgstr "Wachtwoord"
-
-#, php-format
-msgid "changepasswd"
-msgstr "Wachtwoord veranderen"
-
-#, php-format
-msgid "curpasswd"
-msgstr "Huidig wachtwoord:"
-
-#, php-format
-msgid "newpasswd"
-msgstr "Nieuw wachtwoord:"
-
-#, php-format
-msgid "confpasswd"
-msgstr "Bevestig nieuw wachtwoord:"
-
-#, php-format
-msgid "nopassword"
-msgstr "Vul a.u.b. nieuw wachtwoord in."
-
-#, php-format
-msgid "nocurpassword"
-msgstr "Vul a.u.b. het huidige wachtwoord in."
-
-#, php-format
-msgid "passwordincorrect"
-msgstr "Huidig wachtwoord is onjuist."
-
-#, php-format
-msgid "passwordinconsistency"
-msgstr "Nieuw wachtwoord komt niet overeen met controleveld."
-
-#, php-format
-msgid "internalerror"
-msgstr "De server heeft meer dan een records in de database aangepast. Dit kan negatieve gevolgen hebben voor alle gebruikers van de server. Neem contact op met de serveradministrator."
-
-#, php-format
-msgid "errorsaving"
-msgstr "Kan het nieuwe wachtwoord niet opslaan, neem contact op met de serveradministrator."
-
-#, php-format
-msgid "passwordminlength"
-msgstr "Wachtwoord is te kort: %d tekens vereist."
-
-#, php-format
-msgid "autoreply"
-msgstr "Autobeantwoorden"
-
-#, php-format
-msgid "autoreplymessage"
-msgstr "Berichtinhoud"
-
-#, php-format
-msgid "autoreplyenabled"
-msgstr "Ingeschakeld"
-
-#, php-format
-msgid "and"
-msgstr "en"
 

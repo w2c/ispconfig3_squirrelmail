@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SITE VERSION\n"
-"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"POT-Creation-Date: Mon, 04 Oct 2010 15:29:33 +0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
 "Language-Team: LANGUAGE <LL li org>\n"
@@ -16,8 +16,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #, php-format
-msgid "isp_filter"
+msgid "acc_acc"
+msgstr "Account"
+
+#, php-format
+msgid "acc_alias"
+msgstr "Indirizzi email associati (alias)"
+
+#, php-format
+msgid "acc_general"
+msgstr "Generale"
+
+#, php-format
+msgid "acc_pass"
+msgstr "Password"
+
+#, php-format
+msgid "acc_forward"
+msgstr "Inoltro"
+
+#, php-format
+msgid "acc_fetchmail"
+msgstr "Recupero posta"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "Autoreply"
+
+#, php-format
+msgid "acc_filter"
 msgstr "Filtri posta"
+
+#, php-format
+msgid "acc_wblist"
+msgstr "White/Black List"
+
+#, php-format
+msgid "acc_lastlogin"
+msgstr "Ultimo accesso"
+
+#, php-format
+msgid "acc_defaultidentity"
+msgstr "Identità predefinita"
+
+#, php-format
+msgid "acc_noalias"
+msgstr "Nessun alias definito"
+
+#, php-format
+msgid "password"
+msgstr "Password"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Modifica la Password"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Password attuale:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Nuova Password:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Nuova Password (conferma):"
+
+#, php-format
+msgid "nopassword"
+msgstr "Prego, inserire una nuova password."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Prego, inserire la password attuale."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "La password attuale è errata."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Le nuova password non è stata inserita correttamente.<br>Prego, riprova."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "La password inserita è troppo corta: sono richiesti almeno %d caratteri."
 
 #, php-format
 msgid "filtername"
@@ -93,11 +177,19 @@ msgstr "Numero massimo di regole raggiunto"
 
 #, php-format
 msgid "textempty"
-msgstr "Prego, Inserire un messaggio"
+msgstr "Uno o più campi non sono valorizzati"
 
 #, php-format
-msgid "fetchmail"
-msgstr "Recupero posta"
+msgid "autoreplymessage"
+msgstr "Messaggio"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Abilitato"
+
+#, php-format
+msgid "and"
+msgstr "e"
 
 #, php-format
 msgid "fetchmailtyp"
@@ -130,108 +222,4 @@ msgstr "Confermi la cancellazione dell'elemento selezionato?"
 #, php-format
 msgid "fetchmaillimitreached"
 msgstr "Limite raggiunto"
-
-#, php-format
-msgid "isp_acc"
-msgstr "Account"
-
-#, php-format
-msgid "isp_alias"
-msgstr "Indirizzi email associati (alias)"
-
-#, php-format
-msgid "isp_general"
-msgstr "Generale"
-
-#, php-format
-msgid "isp_pass"
-msgstr "Password"
-
-#, php-format
-msgid "isp_forward"
-msgstr "Inoltro"
-
-#, php-format
-msgid "isp_fetchmail"
-msgstr "Recupero posta"
-
-#, php-format
-msgid "isp_autoreply"
-msgstr "Autoreply"
-
-#, php-format
-msgid "lastlogin"
-msgstr "Ultimo accesso"
-
-#, php-format
-msgid "defaultidentity"
-msgstr "Identità predefinita"
-
-#, php-format
-msgid "noalias"
-msgstr "Nessun alias definito"
-
-#, php-format
-msgid "password"
-msgstr "Password"
-
-#, php-format
-msgid "changepasswd"
-msgstr "Modifica la Password"
-
-#, php-format
-msgid "curpasswd"
-msgstr "Password attuale:"
-
-#, php-format
-msgid "newpasswd"
-msgstr "Nuova Password:"
-
-#, php-format
-msgid "confpasswd"
-msgstr "Nuova Password (conferma):"
-
-#, php-format
-msgid "nopassword"
-msgstr "Prego, inserire una nuova password."
-
-#, php-format
-msgid "nocurpassword"
-msgstr "Prego, inserire la password attuale."
-
-#, php-format
-msgid "passwordincorrect"
-msgstr "La password attuale è errata."
-
-#, php-format
-msgid "passwordinconsistency"
-msgstr "Le nuova password non è stata inserita correttamente.<br>Prego, riprova."
-
-#, php-format
-msgid "internalerror"
-msgstr "L'aggiornamento della password non è univoco.<br>Questa è una situazione anomala.<br>Contatta il responsabile del servizo di posta."
-
-#, php-format
-msgid "errorsaving"
-msgstr "L'aggiornamento della password è fallito.<br>Contatta il responsabile del servizo di posta."
-
-#, php-format
-msgid "passwordminlength"
-msgstr "La password inserita è troppo corta: sono richiesti almeno %d caratteri."
-
-#, php-format
-msgid "autoreply"
-msgstr "Risposta automatica"
-
-#, php-format
-msgid "autoreplymessage"
-msgstr "Messaggio"
-
-#, php-format
-msgid "autoreplyenabled"
-msgstr "Abilitato"
-
-#, php-format
-msgid "and"
-msgstr "e"
 

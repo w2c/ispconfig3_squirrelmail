@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: SITE VERSION\n"
-"POT-Creation-Date: Sat, 10 Apr 2010 12:08:34 +0200\n"
+"POT-Creation-Date: Mon, 04 Oct 2010 15:29:33 +0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
 "Language-Team: LANGUAGE <LL li org>\n"
@@ -16,8 +16,176 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #, php-format
-msgid "isp_filter"
+msgid "acc_acc"
+msgstr "Account"
+
+#, php-format
+msgid "acc_alias"
+msgstr "Linked email address(es)"
+
+#, php-format
+msgid "acc_general"
+msgstr "General"
+
+#, php-format
+msgid "acc_pass"
+msgstr "Password"
+
+#, php-format
+msgid "acc_forward"
+msgstr "Forwarding"
+
+#, php-format
+msgid "acc_fetchmail"
+msgstr "Fetchmail"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "Autoreply"
+
+#, php-format
+msgid "acc_filter"
 msgstr "Mail Filter"
+
+#, php-format
+msgid "acc_wblist"
+msgstr "Black/White List"
+
+#, php-format
+msgid "acc_lastlogin"
+msgstr "Last Login"
+
+#, php-format
+msgid "acc_defaultidentity"
+msgstr "Default Identity"
+
+#, php-format
+msgid "acc_noalias"
+msgstr "No linked email address(es)"
+
+#, php-format
+msgid "forwardingaddress"
+msgstr "Forwarding address"
+
+#, php-format
+msgid "forwardingenabled"
+msgstr "Enabled"
+
+#, php-format
+msgid "forwardingloop"
+msgstr "This forwarding will loop"
+
+#, php-format
+msgid "forwardingempty"
+msgstr "Please enter a forwarding address"
+
+#, php-format
+msgid "invalidaddress"
+msgstr "Invalid Email Address"
+
+#, php-format
+msgid "wblisttype"
+msgstr "Typ"
+
+#, php-format
+msgid "wblistwhitelist"
+msgstr "White list"
+
+#, php-format
+msgid "wblistblacklist"
+msgstr "Black list"
+
+#, php-format
+msgid "wblistpriority"
+msgstr "Priority"
+
+#, php-format
+msgid "wblistenabled"
+msgstr "Enabled"
+
+#, php-format
+msgid "wblistentries"
+msgstr "Available entries"
+
+#, php-format
+msgid "wblistnorules"
+msgstr "No entries available"
+
+#, php-format
+msgid "wblistdelconfirm"
+msgstr "Are you sure to delete this entry?"
+
+#, php-format
+msgid "wblimitreached"
+msgstr "Limit reached"
+
+#, php-format
+msgid "textempty"
+msgstr "One or more fields are empty"
+
+#, php-format
+msgid "policy_name"
+msgstr "Policy"
+
+#, php-format
+msgid "spammove"
+msgstr "Move Spam Emails to Junk directory"
+
+#, php-format
+msgid "policy_entries"
+msgstr "Available Policies"
+
+#, php-format
+msgid "policy_tag"
+msgstr "Tag Level"
+
+#, php-format
+msgid "policy_kill"
+msgstr "Kill Level"
+
+#, php-format
+msgid "spamnopolicies"
+msgstr "No Policies available"
+
+#, php-format
+msgid "password"
+msgstr "Password"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Change Password"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Current Password:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "New Password:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Confirm New Password:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Please input new password."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Please input current password."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Current password is incorrect."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Inconsistency of password, please try again."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "Password is too short: %d digits required."
 
 #, php-format
 msgid "filtername"
@@ -92,36 +260,32 @@ msgid "filterlimitreached"
 msgstr "Limit reached"
 
 #, php-format
-msgid "textempty"
-msgstr "Please enter a Message"
+msgid "autoreplymessage"
+msgstr "Message"
 
 #, php-format
-msgid "forwarding"
-msgstr "Forwarding"
-
-#, php-format
-msgid "invalidaddress"
-msgstr "Invalid Email Address"
-
-#, php-format
-msgid "forwardingaddress"
-msgstr "Forwarding address"
-
-#, php-format
-msgid "forwardingenabled"
+msgid "autoreplyenabled"
 msgstr "Enabled"
 
 #, php-format
-msgid "forwardingempty"
-msgstr "Please enter a forwarding address"
+msgid "and"
+msgstr "and"
 
 #, php-format
-msgid "forwardingloop"
-msgstr "This forwarding will loop"
+msgid "autoreplystarton"
+msgstr "Start on"
 
 #, php-format
-msgid "fetchmail"
-msgstr "Fetchmail"
+msgid "autoreplyendby"
+msgstr "End by"
+
+#, php-format
+msgid "startdate_notfuture"
+msgstr "Start date cannot be in the past"
+
+#, php-format
+msgid "endate_notgreater"
+msgstr "End date must be set and be later than start date"
 
 #, php-format
 msgid "fetchmailtyp"
@@ -156,132 +320,8 @@ msgid "fetchmaillimitreached"
 msgstr "Limit reached"
 
 #, php-format
-msgid "isp_acc"
-msgstr "Account"
-
-#, php-format
-msgid "isp_alias"
-msgstr "Linked email address(es)"
-
-#, php-format
-msgid "isp_general"
-msgstr "General"
-
-#, php-format
-msgid "isp_pass"
-msgstr "Password"
-
-#, php-format
-msgid "isp_forward"
-msgstr "Forwarding"
-
-#, php-format
-msgid "isp_fetchmail"
-msgstr "Fetchmail"
-
-#, php-format
-msgid "isp_autoreply"
-msgstr "Autoreply"
-
-#, php-format
-msgid "lastlogin"
-msgstr "Last Login"
-
-#, php-format
-msgid "defaultidentity"
-msgstr "Default Identity"
-
-#, php-format
-msgid "noalias"
-msgstr "No linked email address(es)"
-
-#, php-format
-msgid "password"
-msgstr "Password"
-
-#, php-format
-msgid "changepasswd"
-msgstr "Change Password"
-
-#, php-format
-msgid "curpasswd"
-msgstr "Current Password:"
-
-#, php-format
-msgid "newpasswd"
-msgstr "New Password:"
-
-#, php-format
-msgid "confpasswd"
-msgstr "Confirm New Password:"
-
-#, php-format
-msgid "nopassword"
-msgstr "Please input new password."
-
-#, php-format
-msgid "nocurpassword"
-msgstr "Please input current password."
-
-#, php-format
-msgid "passwordincorrect"
-msgstr "Current password is incorrect."
-
-#, php-format
-msgid "passwordinconsistency"
-msgstr "Inconsistency of password, please try again."
-
-#, php-format
-msgid "internalerror"
-msgstr "The server is updated more than one row in the database. This could be bad for all users. Contact your system adminstrator."
-
-#, php-format
-msgid "errorsaving"
-msgstr "Could not save your new password to the database. Contact your system adminstrator."
-
-#, php-format
-msgid "passwordminlength"
-msgstr "Password is too short: %d digits required."
-
-#, php-format
-msgid "autoreply"
-msgstr "Autoreply"
-
-#, php-format
-msgid "autoreplymessage"
-msgstr "Message"
-
-#, php-format
-msgid "autoreplyenabled"
-msgstr "Enabled"
-
-#, php-format
-msgid "and"
-msgstr "and"
-
-#, php-format
-msgid "autoreplystarton"
-msgstr "Start on"
-
-#, php-format
-msgid "autoreplyendby"
-msgstr "End by"
-
-#, php-format
-msgid "startdate_notfuture"
-msgstr "Start date cannot be in the past"
-
-#, php-format
-msgid "endate_notgreater"
-msgstr "End date must be set and be later than start date"
-
-#, php-format
 msgid "isp_policy"
 msgstr "Spam Policy"
-
-#, php-format
-msgid "junkpolicy"
-msgstr "Policy"
 
 #, php-format
 msgid "junktaglevel"
@@ -318,4 +358,12 @@ msgstr "Priority"
 #, php-format
 msgid "policyconfirm"
 msgstr "Do you want to change your spam policy to"
+
+#, php-format
+msgid "invalid_policyid"
+msgstr "Invalid policy id"
+
+#, php-format
+msgid "nopolicy"
+msgstr "No policy"
 
