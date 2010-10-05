@@ -1,17 +1,8 @@
 <?php include_once ('templates/section_head.phtml'); ?>
 
-<script type="text/javascript">
-function set_policy(policy_name, policy_id)
-{
-	if (confirm('<?php echo _('policyconfirm')?>: '+policy_name+'?')) {
-		location.href = "<?php echo $base_url . '?page='.POLICY_PAGE.'&action=setpolicy&_id='?>"+policy_id;
-	}
-}
-</script>
-
 <div id="prefs-title" class="boxtitle"><?php echo _('isp_policy')?></div>
 <div id="prefs-details">
-<form name="filterform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.POLICY_PAGE?>" method="post">
+<form name="policyform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.POLICY_PAGE?>" method="post">
 <input name="_id" type="hidden" value="<?php echo $id?>" />
 <fieldset><legend><?php echo _('isp_policy')?> ::: <?php echo $username?></legend> <br />
 <?php 
@@ -24,24 +15,36 @@ else {
 	<tbody>
 		<tr>
 			<td class="title"><?php echo _("junkpolicy_name")?>:</td>
-			<td class=""><?php echo $policy['policy_name']?></td>
+			<td class="">
+			<select name="_policy" id="policy">
+			<?php
+			foreach ($entries as $entry)
+			{
+				if ($entry['policy_name'] == $policy['policy_name']) {
+	                echo '<option value="' . $entry['id'] .'" selected="selected">'.$entry['policy_name'].'</option>' . "\n";
+	            } else {
+	                echo '<option value="' . $entry['id'] .'">'.$entry['policy_name'].'</option>' . "\n";
+	            }
+			}
+			?>
+			</select>			
+			</td>
 		</tr>
 		<tr>
-			<td class="title"><?php echo _("junktaglevel")?>:</td>
-			<td class=""><?php echo $policy['spam_tag_level']?></td>
-		</tr>
-		<tr>
-			<td class="title"><?php echo _("junkkilllevel")?>:</td>
-			<td class=""><?php echo $policy['spam_kill_level']?></td>
+			<td class="title"><label for="spammove"><?php echo _("spammove")?></label>:</td>
+			<td class=""><input name="_spammove" id="spammove" value="1" <?php echo $spammove?> type="checkbox" /></td>
 		</tr>
 	</tbody>
 </table>
 <br />
 <?php } ?>
+<div class="footerleft">
+<input value="<?php echo $save?>" type="submit" />
+</div>
 </fieldset>
 
 </form>
-<fieldset><legend><?php echo _('junksetpolicy')?> ::: <?php echo $username?></legend> <br />
+<fieldset><legend><?php echo _('policy_entries')?> ::: <?php echo $username?></legend> <br />
 <div id="policies-cont">
 <table id="policies-table" class="records-table" summary="" border="0" cellspacing="0">
 	<thead>
@@ -64,9 +67,7 @@ else {
 		foreach ($entries as $entry)
 		{
 			echo '<tr style="background:'.$color[4].';">
-			<td>
-			<a href="#" onclick="set_policy(\''.$entry['policy_name'].'\', '.$entry['id'].'); return false;">'.$entry['policy_name'].'</a>
-			</td>
+			<td>'.$entry['policy_name'].'</td>
 			<td>'.$entry['spam_tag_level'].'</td>
 			<td>'.$entry['spam_kill_level'].'</td>
 			</tr>';

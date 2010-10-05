@@ -4,21 +4,43 @@
 	<thead>
 		<tr>
 			<td><a href="<?php echo $base_url . '?page='.GENERAL_PAGE?>"
-				target="section_frame"><?php echo _("isp_general")?></a>&nbsp;&nbsp; 
-				<a href="<?php echo $base_url . '?page='.PASSWORD_PAGE?>"
-				target="section_frame"><?php echo _("isp_pass")?></a>&nbsp;&nbsp; 
-				<a href="<?php echo $base_url . '?page='.FETCHMAIL_PAGE?>"
-				target="section_frame"><?php echo _("isp_fetchmail")?></a>&nbsp;&nbsp; 
-				<a href="<?php echo $base_url . '?page='.FORWARDING_PAGE?>"
-				target="section_frame"><?php echo _("isp_forward")?></a>&nbsp;&nbsp; 
-				<a href="<?php echo $base_url . '?page='.AUTOREPLY_PAGE?>"
-				target="section_frame"><?php echo _("isp_autoreply")?></a>&nbsp;&nbsp; 
-				<a href="<?php echo $base_url . '?page='.MAILFILTER_PAGE?>"
-				target="section_frame"><?php echo _("isp_filter")?></a>&nbsp;&nbsp; 
-				<a href="<?php echo $base_url . '?page='.POLICY_PAGE?>"
-				target="section_frame"><?php echo _("isp_policy")?></a>&nbsp;&nbsp; 
-				<a href="<?php echo $base_url . '?page='.WBLIST_PAGE?>"
-				target="section_frame"><?php echo _("isp_wblist")?></a>
+				target="section_frame"><?php echo _("acc_general")?></a>&nbsp;&nbsp;
+				<?php 
+				if (defined('PASSWORD_PAGE')) {
+					echo '<a href="' . $base_url . '?page='.PASSWORD_PAGE.'"
+					target="section_frame">'._("acc_pass").'</a>&nbsp;&nbsp;';
+				}
+				
+				if (defined('FETCHMAIL_PAGE')) {
+					echo '<a href="' . $base_url . '?page='.FETCHMAIL_PAGE.'"
+					target="section_frame">'._("acc_fetchmail").'</a>&nbsp;&nbsp;';
+				}
+				
+				if (defined('FORWARDING_PAGE')) {
+					echo '<a href="' . $base_url . '?page='.FORWARDING_PAGE.'"
+					target="section_frame">'._("acc_forward").'</a>&nbsp;&nbsp;';
+				}
+				
+				if (defined('AUTOREPLY_PAGE')) {
+					echo '<a href="' . $base_url . '?page='.AUTOREPLY_PAGE.'"
+					target="section_frame">'._("acc_autoreply").'</a>&nbsp;&nbsp;';
+				}
+				
+				if (defined('MAILFILTER_PAGE')) {
+					echo '<a href="' . $base_url . '?page='.MAILFILTER_PAGE.'"
+					target="section_frame">'._("acc_filter").'</a>&nbsp;&nbsp;';
+				}
+				
+				if (defined('POLICY_PAGE')) {
+					echo '<a href="' . $base_url . '?page='.POLICY_PAGE.'"
+					target="section_frame">'._("isp_policy").'</a>&nbsp;&nbsp;';
+				}
+				
+				if (defined('WBLIST_PAGE')) {
+					echo '<a href="' . $base_url . '?page='.WBLIST_PAGE.'"
+					target="section_frame">'._("acc_wblist").'</a>&nbsp;&nbsp;';
+				}
+				?>
 			</td>
 		</tr>
 	</thead>

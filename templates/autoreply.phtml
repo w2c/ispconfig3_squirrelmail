@@ -33,10 +33,10 @@ function dates_reset()
 	}
 }
 </script>
-<div id="prefs-title" class="boxtitle"><?php echo _('isp_autoreply')?></div>
+<div id="prefs-title" class="boxtitle"><?php echo _('acc_autoreply')?></div>
 <form name="autoreplyform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.AUTOREPLY_PAGE?>" method="post">
 <div id="prefs-details">
-<fieldset><legend><?php echo _('isp_autoreply')?> ::: <?php echo $username?></legend> <br />
+<fieldset><legend><?php echo _('acc_autoreply')?> ::: <?php echo $username?></legend> <br />
 <table>
 	<tbody>
 		<tr>
@@ -49,9 +49,19 @@ function dates_reset()
 			<input name="_autoreplyenabled" id="autoreplyenabled" value="1" onclick="dates_reset();" type="checkbox" <?php echo $autoreplyenabled?> />&nbsp;<?php echo _('and')?><br />
 			<p style="margin-bottom: 3px;width:360px">
 					  <label class="date-label" for="_autoresponder_start_date[day]"><?php echo _('autoreplystarton')?></label>
-					  <?php echo ispc_getDateTimeHTML('_autoresponder_start_date', $autoresponder_start_date)?></p>
+					  <?php 
+					  if ($autoresponder_start_date == '0000-00-00 00:00:00') {
+					  	$autoresponder_start_date = date('Y-m-d H:i:s');
+					  }
+					  echo ispc_getDateTimeHTML('_autoresponder_start_date', $autoresponder_start_date);
+					  ?></p>
 					  <label class="date-label" for="autoresponder_end_date[day]"><?php echo _('autoreplyendby')?></label>
-					  <?php echo ispc_getDateTimeHTML('_autoresponder_end_date', $autoresponder_end_date)?>
+					  <?php 
+					  if ($autoresponder_end_date == '0000-00-00 00:00:00') {
+					  	$autoresponder_end_date = date('Y-m-d H:i:s', (mktime()+86400));
+					  }
+					  echo ispc_getDateTimeHTML('_autoresponder_end_date', $autoresponder_end_date);
+					  ?>
 			</td>
 		</tr>
 	</tbody>

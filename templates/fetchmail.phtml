@@ -1,15 +1,15 @@
 <?php include_once ('templates/section_head.phtml'); ?>
 
-<div id="prefs-title" class="boxtitle"><?php echo _("isp_fetchmail")?></div>
+<div id="prefs-title" class="boxtitle"><?php echo _("acc_fetchmail")?></div>
 <div id="prefs-details">
 <form name="fetchmailform" action="<?php echo SM_PATH . 'plugins/ispconfig3/ispconfig3.php?page='.FETCHMAIL_PAGE?>" method="post">
-<fieldset><legend><?php echo _("isp_fetchmail")?> ::: <?php echo $username?></legend> <br />
+<fieldset><legend><?php echo _("acc_fetchmail")?> ::: <?php echo $username?></legend> <br />
 <input name="_id" type="hidden" value="<?php echo $mailget_id?>" /> 
 <input name="_serverid" type="hidden" value="<?php echo $server_id?>" />
 <table>
 	<tbody>
 		<tr>
-			<td class="title"><label for="fetchmailtyp"><?php echo _("fetchmailtyp")?></label>:</td>
+			<td class="title"><label for="fetchmailtyp"><?php echo _("junktype")?></label>:</td>
 			<td><select name="_fetchmailtyp" id="fetchmailtyp">
 			<?php
 			foreach (array('pop3', 'imap') as $_type) 
@@ -34,7 +34,7 @@
 				type="text" value="<?php echo $source_username?>"></td>
 		</tr>
 		<tr>
-			<td class="title"><label for="fetchmailpass"><?php echo _("isp_pass")?></label>:</td>
+			<td class="title"><label for="fetchmailpass"><?php echo _("acc_pass")?></label>:</td>
 			<td><input name="_fetchmailpass" id="fetchmailpass" size="40"
 				autocomplete="off" type="password" value="<?php echo $source_password?>"></td>
 		</tr>
