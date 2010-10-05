@@ -79,22 +79,22 @@ function ispc_getGeneralPage()
 
 function ispc_getPasswordPage()
 {
-	global $rcmail_config;
+	global $ispc_config;
 	
 	$prev = sq_change_text_domain('squirrelmail');
 	$_save = _("Save");
 	
 	sq_change_text_domain('ispconfig3', SM_PATH . 'plugins/ispconfig3/locale');
 	
-	$pwl = (isset($rcmail_config['password_min_length']) && is_numeric($rcmail_config['password_min_length'])) ? $rcmail_config['password_min_length'] : 999;
-	$confirm = (isset($rcmail_config['password_confirm_current']) && is_bool($rcmail_config['password_confirm_current'])) ? $rcmail_config['password_confirm_current'] : true;
+	$pwl = (isset($ispc_config['password_min_length']) && is_numeric($ispc_config['password_min_length'])) ? $ispc_config['password_min_length'] : 999;
+	$confirm = (isset($ispc_config['password_confirm_current']) && is_bool($ispc_config['password_confirm_current'])) ? $ispc_config['password_confirm_current'] : true;
 	
 	ispc_displayPage('password', array('save' => $_save, 'pwl' => $pwl, 'confirm' => $confirm));
 }
 
 function ispc_savePassword()
 {
-	global $username, $rcmail_config;
+	global $username, $ispc_config;
 	
 	sqgetGlobalVar('_newpasswd', $new_password, SQ_POST);
 	if (empty($new_password)) {
@@ -113,13 +113,13 @@ function ispc_savePassword()
 		return false;
 	}
 	
-	$pwl = (isset($rcmail_config['password_min_length']) && is_numeric($rcmail_config['password_min_length'])) ? $rcmail_config['password_min_length'] : 999;
+	$pwl = (isset($ispc_config['password_min_length']) && is_numeric($ispc_config['password_min_length'])) ? $ispc_config['password_min_length'] : 999;
 	if (strlen($new_password) < $pwl) {
 		section_error(sprintf(_('passwordminlength'), $pwl));
 		return false;
 	}
 	
-	$confirm = (isset($rcmail_config['password_confirm_current']) && is_bool($rcmail_config['password_confirm_current'])) ? $rcmail_config['password_confirm_current'] : true;
+	$confirm = (isset($ispc_config['password_confirm_current']) && is_bool($ispc_config['password_confirm_current'])) ? $ispc_config['password_confirm_current'] : true;
 	if ($confirm)
 	{
 		sqgetGlobalVar('_curpasswd', $cur_password, SQ_POST);
@@ -187,7 +187,7 @@ function ispc_getFetchmailPage()
 
 function ispc_saveFetchmail()
 {
-	global $username, $rcmail_config;
+	global $username, $ispc_config;
 	
 	sqgetGlobalVar('_id', $id, SQ_POST);
 	sqgetGlobalVar('_serverid', $serverid, SQ_POST);
@@ -221,7 +221,7 @@ function ispc_saveFetchmail()
 		$res = $_ispc_remote->grud_record('get','user', array('email' => $username), true);
 		$_result = $_ispc_remote->grud_record('get','fetchmail', array('destination' => $username));
 					
-		$limit = (isset($rcmail_config['fetchmail_limit']) && is_numeric($rcmail_config['fetchmail_limit'])) ? $rcmail_config['fetchmail_limit'] : 999;
+		$limit = (isset($ispc_config['fetchmail_limit']) && is_numeric($ispc_config['fetchmail_limit'])) ? $ispc_config['fetchmail_limit'] : 999;
 		if(count($_result) >= $limit) {
 			section_error(_('fetchmaillimitreached'));
 			return false;
@@ -242,43 +242,26 @@ function ispc_saveFetchmail()
 	}
 	else 
 	{
-		/**
-		 * @todo Not using our remoting class as the param order of the mail_fetchmail_update function differs from other update calls.
-		 * When this is changed upstream revert this section to using the remoting class.
-		 */
-		$client = new SoapClient(null, array('location' => $rcmail_config['soap_url'].'index.php',
-											 'uri'      => $rcmail_config['soap_url']));
+		$res = $_ispc_remote->grud_record('get','fetchmail', $id);
 		
-		try
+		if ($res['destination'] == $username) 
 		{
-			$session_id = $client->login($rcmail_config['remote_soap_user'],$rcmail_config['remote_soap_pass']);
-			$res = $client->mail_fetchmail_get($session_id, $id);
-
-			if ($res['destination'] == $username) 
-			{
-				$params = array('sys_userid' => $res['sys_userid'],
-								'id' => $id,
-								'server_id' => $serverid,
-								'type' => $typ,
-								'source_server' => $server,
-								'source_username' => $user,
-								'source_password' => $pass,							
-								'source_delete' => $delete,
-								'destination' => $username,
-								'active' => $enabled);
-				
-				$client_id = $client->client_get_id($session_id, $res['sys_userid']);
-				$add = $client->mail_fetchmail_update($session_id, $id, $client_id, $params);
-				
-				section_message(_("Successfully Saved Options"));
-				$client->logout($session_id);
-			} 
-			else {
-				section_error(_('opnotpermitted'));
-			}
-		}
-		catch (SoapFault $e) {
-			section_error('Soap Error: '.$e->getMessage());
+			$params = array('sys_userid' => $res['sys_userid'],
+							'id' => $id,
+							'server_id' => $serverid,
+							'type' => $typ,
+							'source_server' => $server,
+							'source_username' => $user,
+							'source_password' => $pass,							
+							'source_delete' => $delete,
+							'destination' => $username,
+							'active' => $enabled);
+			
+			$_ispc_remote->grud_record('update','fetchmail', $params);
+			section_message(_("Successfully Saved Options"));
+		} 
+		else {
+			section_error(_('opnotpermitted'));
 		}
 	}
 }
@@ -313,10 +296,9 @@ function ispc_getForwardingPage()
 	
 	$_ispc_remote = new ispc_remote();
 	$res = $_ispc_remote->grud_record('get','user', array('email' => $username));
-	$filters = $res[0]['custom_mailfilter'];
 	
-	if (!empty($filters) && preg_match('/^cc "!([a-z0-9][a-z0-9-.+_]*@[a-z0-9]([a-z0-9-][.]?)*[a-z0-9]\.[a-z]{2,5})[^"]*"$/m', $filters, $cc)) {
-		$_vars['destination'] = $cc[1];
+	if (array_key_exists('cc', $res[0]) && !empty($res[0]['cc'])) {
+		$_vars['destination'] = $res[0]['cc'];
 	}
 	
 	ispc_displayPage('forwarding', $_vars);
@@ -344,14 +326,7 @@ function ispc_saveForwarding()
     	$params['id'] = $params['mailuser_id'];
 		unset($params['mailuser_id']);
     	
-   	 	if (!empty($params['custom_mailfilter']) && preg_match('/^cc "!([a-z0-9][a-z0-9-.+_]*@[a-z0-9](?:[a-z0-9-][.]?)*[a-z0-9]\.[a-z]{2,5})([^"]*)"$/m', $params['custom_mailfilter'], $cc)) {
-			$params['custom_mailfilter'] = preg_replace('/cc "!'.$cc[1].$cc[2].'"/', 'cc "!'.$address.$cc[2].'"', $params['custom_mailfilter']);
-		}
-		else {
-			// The order of filters is significant. Prepend cc command to the recipes to ensure mail is sent
-			// before anything else is processed.
-			$params['custom_mailfilter'] = "cc \"!$address\"\n\n" . $params['custom_mailfilter'];
-		}
+   	 	$params['cc'] = $address;
     	
 		$_ispc_remote->grud_record('update','user', $params);
 		section_message(_("Successfully Saved Options"));
@@ -368,18 +343,12 @@ function ispc_deleteForwarding()
 	$params = $res[0];
     unset($params['password']);
 	
-	if (!empty($params['custom_mailfilter']) && preg_match('/^cc "!([a-z0-9][a-z0-9-.+_]*@[a-z0-9](?:[a-z0-9-][.]?)*[a-z0-9]\.[a-z]{2,5})[^"]*"$/m', $params['custom_mailfilter'], $cc))
-	{
-		if (trim($cc[2]) == '') { // No other addresses, safe to remove line
-			$params['custom_mailfilter'] = preg_replace('/^cc "!([a-z0-9][a-z0-9-.+_]*@[a-z0-9](?:[a-z0-9-][.]?)*[a-z0-9]\.[a-z]{2,5})[^"]*"$/m', '', $params['custom_mailfilter']);
-			$params['custom_mailfilter'] = rtrim($params['custom_mailfilter'], " \n");
-		}
-		else {
-			$params['custom_mailfilter'] = preg_replace('/cc "!'.$cc[1].$cc[2].'/', 'cc "!'.trim($cc[2]).'"', $params['custom_mailfilter']);
-		}
-		
+	if (!empty($params['cc']))
+	{		
 		$params['id'] = $params['mailuser_id'];
 		unset($params['mailuser_id']);
+		
+		$params['cc'] = '';
 		
 		$_ispc_remote->grud_record('update','user', $params);
 		section_message(_('Deleted'));
@@ -393,7 +362,7 @@ function ispc_getDateTimeHTML($form_element, $default_value, $display_seconds=fa
 	$_showdate = ($_datetime === false) ? false : true;
 
 	$dselect = array('day','month','year','hour','minute');
-            if ($display_seconds === true) {
+    if ($display_seconds === true) {
 	 	$dselect[] = 'second';
 	}
 	 
@@ -448,7 +417,7 @@ function ispc_getDateTimeHTML($form_element, $default_value, $display_seconds=fa
 											  'value' => sprintf('%d', $minute));
 	 				}
 	 			}
-	 			$selected_value = (int)floor(date('i', $_datetime));
+	 			$selected_value = (int)(floor(date('i', $_datetime) / 5) * 5);
 	 			break;
 	 			
 	 		case 'second':	
@@ -607,7 +576,7 @@ function ispc_getMailFilterPage()
 
 function ispc_saveMailFilter()
 {
-	global $username, $rcmail_config;
+	global $username, $ispc_config;
 	
 	sqgetGlobalVar('_id', $id, SQ_POST);
 		
@@ -643,7 +612,7 @@ function ispc_saveMailFilter()
 	{ 
 		$_result = $_ispc_remote->grud_record('get','user_filter', array('mailuser_id' => $res[0]['mailuser_id']));
 					
-		$limit = (isset($rcmail_config['filter_limit']) && is_numeric($rcmail_config['filter_limit'])) ? $rcmail_config['filter_limit'] : 999;
+		$limit = (isset($ispc_config['filter_limit']) && is_numeric($ispc_config['filter_limit'])) ? $ispc_config['filter_limit'] : 999;
 		if(count($_result) >= $limit) {
 			section_error(_('filterlimitreached'));
 			return false;
@@ -719,6 +688,7 @@ function ispc_getPolicyPage()
 	
 	$res = $_ispc_remote->grud_record('get','spamfilter_user', array('email' => $username), true);
 	$policies = $_ispc_remote->grud_record('get','policy', array(1 => 1), true);
+	$mu = $_ispc_remote->grud_record('get','user', array('email' => $username), true);
 		
 	$policy = array();
 	foreach($policies as $val)
@@ -733,70 +703,68 @@ function ispc_getPolicyPage()
 				   'entries' => $policies,
 				   'policy' => $policy,
 				   'id' => $res[0]['id'],
-				   'priority' => $res[0]['priority']);
+				   'priority' => $res[0]['priority'],
+				   'spammove' => ($mu[0]['move_junk'] == 'y') ? 'checked="checked"': '');
 	
 	ispc_displayPage('policy', $_vars);
 }
 
-function ispc_setPolicy()
+function ispc_savePolicy()
 {
-	global $username, $rcmail_config;
+	global $username, $ispc_config;
 	
-	sqgetGlobalVar('_id', $id, SQ_GET);
+	sqgetGlobalVar('_policy', $policy_id, SQ_POST);
 	
-	if (!empty($id) && is_numeric($id)) 
+	sqgetGlobalVar('_spammove', $move_junk, SQ_POST);
+	$move_junk = ($move_junk == 1) ? 'y': 'n';
+	
+	if (!empty($policy_id) && is_numeric($policy_id)) 
 	{
-		/**
-		 * @todo Not using our remoting class as the param order of the mail_spamfilter_user_update function is incorrect.
-		 * When this bug is fixed upstream revert this section to using the remoting class.
-		 */
-		$client = new SoapClient(null, array('location' => $rcmail_config['soap_url'].'index.php',
-											 'uri'      => $rcmail_config['soap_url']));
+		$_ispc_remote = new ispc_remote();
+		$mu = $_ispc_remote->grud_record('get','user', array('email' => $username), true);
 		
-		try
+		if ($mu[0]['move_junk'] != $move_junk) // Update if move to junk folder changed
 		{
-			$session_id = $client->login($rcmail_config['remote_soap_user'],$rcmail_config['remote_soap_pass']);
+			$params = $mu[0];
+	    	unset($params['password']);
+	    
+	    	$params['id'] = $params['mailuser_id'];
+			unset($params['mailuser_id']);
 			
-			// Validate id is in fact an policy id
-			$res = $client->mail_policy_get($session_id, $id);
-			if (!count($res)) {
-		 		section_error(_('invalid_policyid'));
-		 		return false;
-		 	}
-			
-			$res = $client->mail_spamfilter_user_get($session_id, array('email' => $username));
-			if (!isset($res[0])) // User doesn't have policy settings yet
-			{
-				$res = $client->mail_user_get($session_id, array('email' => $username), true);
-				
-				$params = array('server_id' => $res[0]['server_id'],
-								'policy_id' => $id,
-								'email' => $username,
-								'fullname' => $username,
-								'priority' => 7,
-								'local' => 'Y');
-				
-				$client_id = $client->client_get_id($session_id, $res[0]['sys_userid']);
-				$client->mail_spamfilter_user_add($session_id, $client_id, $params);
-			}
-			else {
-				$params = $res[0];
-				
-				$primary_id = $params['id'];
-				unset($params['id']);
-
-				$params['policy_id'] = $id;
-				
-				$client_id = $client->client_get_id($session_id, $params['sys_userid']);
-				$client->mail_spamfilter_user_update($session_id, $primary_id, $client_id, $params);
-			}
+			$params['move_junk'] = $move_junk;
 	
-			section_message(_("Successfully Saved Options"));
-			$client->logout($session_id);
+			$_ispc_remote->grud_record('update','user', $params);
 		}
-		catch (SoapFault $e) {
-			section_error('Soap Error: '.$e->getMessage());
+
+		// Validate id is in fact an policy id
+		$res = $_ispc_remote->grud_record('get','policy', $policy_id);
+		if (!count($res)) {
+	 		section_error(_('invalid_policyid'));
+	 		return false;
+	 	}
+		
+	 	$res = $_ispc_remote->grud_record('get','spamfilter_user', array('email' => $username), true);
+		if (!isset($res[0])) // User doesn't have policy settings yet
+		{
+			$params = array('server_id' => $mu[0]['server_id'],
+							'policy_id' => $policy_id,
+							'email' => $username,
+							'fullname' => $username,
+							'priority' => 7,
+							'local' => 'Y');
+			
+			$_ispc_remote->grud_record('add', 'spamfilter_user', $params);
 		}
+		elseif ($res[0]['policy_id'] != $policy_id) // Policy change, update 
+		{
+			$params = $res[0];
+			$params['policy_id'] = $policy_id;
+			
+			$_ispc_remote->grud_record('update', 'spamfilter_user', $params);
+		}
+
+		section_message(_("Successfully Saved Options"));
+
 	}
 }
 
@@ -834,7 +802,7 @@ function ispc_getWBListPage()
 
 function ispc_saveWBList()
 {
-	global $username, $rcmail_config;
+	global $username, $ispc_config;
 	
 	sqgetGlobalVar('_id', $id, SQ_POST);
 	
@@ -854,75 +822,32 @@ function ispc_saveWBList()
 	$_ispc_remote = new ispc_remote();
 	$_result = $_ispc_remote->grud_record('get','spamfilter_user', array('email' => $username), true);
 	
-	if (empty($id)) // Adding entry 
-	{
-		$params = array('sys_userid' => $_result[0]['sys_userid'],
+	$params = array('sys_userid' => $_result[0]['sys_userid'],
 						'server_id' => $_result[0]['server_id'],
 						'rid' => $_result[0]['id'],
 						'wb' => $wb,
 						'email' => $email,
 						'priority' => $priority,
 						'active' => $enabled);
-
+	
+	if (empty($id)) // Adding entry 
+	{
 		$_ispc_remote->grud_record('add', $grud, $params);
 		section_message(_("Successfully Saved Options"));
 	}
 	else 
 	{
-		/**
-		 * @todo Not using our remoting class as the param order of the mail_spamfilter_whitelist(blacklist)_update function is incorrect.
-		 * When this bug is fixed upstream revert this section to using the remoting class.
-		 * 
-		 * $res = $_ispc_remote->grud_record('get', $grud, $id, true);
-		 * 
-		 * if ($_result[0]['id'] != $res['rid']) {
-		 * 	section_error(_('opnotpermitted'));
-		 * 	return false;
-		 * }
-		 * 
-		 * $res['wb'] = $wb;
-		 * $res['email'] = $email;
-		 * $res['priority'] = $priority;
-		 * $res['active'] = $active;
-		 * 
-		 * $_ispc_remote->grud_record('update', $grud, $params);
-		 * section_message(_("Successfully Saved Options"));
-		 */
-		$client = new SoapClient(null, array('location' => $rcmail_config['soap_url'].'index.php',
-											 'uri'      => $rcmail_config['soap_url']));
-		
-		try
-		{
-			$session_id = $client->login($rcmail_config['remote_soap_user'],$rcmail_config['remote_soap_pass']);
-			
-			// Validate id is in fact an policy id
-			$fname = "mail_{$grud}_get";
-			$res = $client->$fname($session_id, $id);
-			
-			if ($_result[0]['id'] != $res['rid']) {
-		 		section_error(_('opnotpermitted'));
-		 		return false;
-		 	}
-		 	
-		 	$primary_id = $res['wblist_id'];
-			unset($res['wblist_id']);
-		 	
-		 	$res['wb'] = $wb;
-		 	$res['email'] = $email;
-		 	$res['priority'] = $priority;
-		 	$res['active'] = $enabled;
-			
-			$client_id = $client->client_get_id($session_id, $res['sys_userid']);
-			
-			$fname = "mail_{$grud}_update";
-			$client->$fname($session_id, $primary_id, $client_id, $res);
-				
-			section_message(_("Successfully Saved Options"));
-			$client->logout($session_id);
-		}
-		catch (SoapFault $e) {
-			section_error('Soap Error: '.$e->getMessage());
-		}
+		 $res = $_ispc_remote->grud_record('get', $grud, $id, true);
+		 
+		 if ($_result[0]['id'] != $res['rid']) {
+		 	section_error(_('opnotpermitted'));
+		 	return false;
+		 }
+		 
+		 $params['id'] = $id;
+		  
+		 $_ispc_remote->grud_record('update', $grud, $params);
+		 section_message(_("Successfully Saved Options"));
 	}
 }
 

@@ -34,14 +34,14 @@ class ispc_remote
 	
 	function __construct()
 	{
-		global $rcmail_config;
+		global $ispc_config;
 		
 		if (is_null($this->_soap_client)) {
-			$this->_soap_client = new SoapClient(null, array('location' => $rcmail_config['soap_url'].'index.php',
-                                     			 			 'uri'      => $rcmail_config['soap_url']));
+			$this->_soap_client = new SoapClient(null, array('location' => $ispc_config['soap_url'].'index.php',
+                                     			 			 'uri'      => $ispc_config['soap_url']));
 			
 			try {
-				$this->_session_id = $this->_soap_client->login($rcmail_config['remote_soap_user'],$rcmail_config['remote_soap_pass']);
+				$this->_session_id = $this->_soap_client->login($ispc_config['remote_soap_user'],$ispc_config['remote_soap_pass']);
 			} 
 			catch (SoapFault $e) {
 				section_error('Soap Error: '.$e->getMessage());

@@ -39,7 +39,7 @@ function ispc_optpage_register_block()
 	global $optpage_blocks;
 	
 	$prev = sq_change_text_domain('ispconfig3', SM_PATH . 'plugins/ispconfig3/locale');
-	$ispc_label = _("isp_acc");
+	$ispc_label = _("acc_acc");
 	
 	sq_change_text_domain($prev);
 	

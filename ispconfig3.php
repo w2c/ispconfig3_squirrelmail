@@ -40,20 +40,25 @@ require_once('config.php');
 require_once('functions.php');
 require_once('ispc_remote.class.php');
 
+// Re-write modules array and map to page ids
 define('GENERAL_PAGE', 1);
-define('PASSWORD_PAGE', 2);
-define('FETCHMAIL_PAGE', 3);
-define('FORWARDING_PAGE', 4);
-define('AUTOREPLY_PAGE', 5);
-define('MAILFILTER_PAGE', 6);
-define('POLICY_PAGE', 7);
-define('WBLIST_PAGE', 8);
+
+$enabled_modules = array();
+$module_count = 2;
+
+foreach ($ispc_config['enable_modules'] as $module)
+{
+	define(strtoupper($module).'_PAGE', $module_count);
+	$module_count++;
+}
 
 // Set up locale, for the error messages.
 $prev = sq_change_text_domain('ispconfig3', SM_PATH . 'plugins/ispconfig3/locale');
 textdomain ('ispconfig3');
 
 sqgetGlobalVar('page', $page, SQ_GET);
+$page = (int)$page;
+
 if (empty($page)) 
 {
 	displayPageHeader($color, 'None'); //Header
@@ -121,11 +126,6 @@ else
 		case POLICY_PAGE:
 			if (!empty($_POST)) {
 				ispc_savePolicy();
-			}
-			
-			sqgetGlobalVar('action', $action, SQ_GET);
-			if (!empty($action) && $action == 'setpolicy') {
-				ispc_setPolicy();
 			}
 			
 			ispc_getPolicyPage();
