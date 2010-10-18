@@ -31,7 +31,10 @@ function squirrelmail_plugin_init_ispconfig3()
 {
     global $squirrelmail_plugin_hooks;
     
-    $squirrelmail_plugin_hooks['optpage_register_block']['ispconfig3'] = 'ispc_optpage_register_block';    
+    $squirrelmail_plugin_hooks['optpage_register_block']['ispconfig3'] = 'ispc_optpage_register_block';  
+    $squirrelmail_plugin_hooks['login_before']['ispconfig3'] = 'ispc_autoselect'; 
+
+    ispc_setaddr();
 }
 
 function ispc_optpage_register_block() 
@@ -49,6 +52,45 @@ function ispc_optpage_register_block()
            'url'  => '../plugins/ispconfig3/ispconfig3.php',
            'desc' => _("Here you can change your password, set an autoresponder, manage your forwarding instructions and customize your spam scoring rules."),
            'js'   => FALSE);
+}
+
+function ispc_autoselect($args=null)
+{
+	global $imapServerAddress, $login_username;
+	
+	if (strpos($login_username, '@') !== false)
+	{		
+		require_once('config.php');
+		require_once('functions.php');
+		require_once('ispc_remote.class.php');
+		
+		if (in_array('autoselect', $ispc_config['enable_modules']))
+		{		
+			$_ispc_remote = new ispc_remote();
+			$res = $_ispc_remote->grud_record('get','user', array('email' => $login_username));
+			
+			if (isset($res[0]['server_id'])) {
+				$soap = $_ispc_remote->get_instance();
+				
+				$mail_server = $soap->server_get($_ispc_remote->get_session_id(), $res[0]['server_id'], 'server');
+				if ($mail_server['ip_address'] != $imapServerAddress) 
+				{
+					sqsession_register($mail_server['ip_address'], 'ispc_imap_address');
+					$imapServerAddress = $mail_server['ip_address'];
+				}
+			}
+		}
+	}
+}
+
+function ispc_setaddr()
+{
+	global $imapServerAddress;
+	
+	sqgetGlobalVar('ispc_imap_address', $ispc_imap_address, SQ_SESSION);
+	if ($ispc_imap_address) {
+		$imapServerAddress = $ispc_imap_address;
+	}
 }
 
 ?>

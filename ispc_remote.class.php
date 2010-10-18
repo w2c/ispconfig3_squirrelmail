@@ -36,6 +36,10 @@ class ispc_remote
 	{
 		global $ispc_config;
 		
+		if (!is_array($ispc_config)) {
+			include('config.php');
+		}
+		
 		if (is_null($this->_soap_client)) {
 			$this->_soap_client = new SoapClient(null, array('location' => $ispc_config['soap_url'].'index.php',
                                      			 			 'uri'      => $ispc_config['soap_url']));
@@ -47,6 +51,16 @@ class ispc_remote
 				section_error('Soap Error: '.$e->getMessage());
 			}
 		}
+	}
+	
+	public function get_instance()
+	{
+		return $this->_soap_client;
+	}
+	
+	public function get_session_id()
+	{
+		return $this->_session_id;
 	}
 
 	public function grud_record($tGrud, $tType, $tParams=array(), $tFilter=false)
