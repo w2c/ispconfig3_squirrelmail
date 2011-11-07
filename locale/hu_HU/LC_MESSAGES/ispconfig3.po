@@ -1,0 +1,321 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR THE COPYRIGHT-HOLDER
+# This file is distributed under the same license as the SITE site.
+# FIRST AUTHOR <EMAIL ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SITE VERSION\n"
+"POT-Creation-Date: Thu, 27 Oct 2011 12:32:13 +0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
+"Language-Team: LANGUAGE <LL li org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "Automatikus válasz"
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "Üzenet"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Engedélyezés"
+
+#, php-format
+msgid "and"
+msgstr "és"
+
+#, php-format
+msgid "autoreplystarton"
+msgstr "Kezdés"
+
+#, php-format
+msgid "autoreplyendby"
+msgstr "Befejezés"
+
+#, php-format
+msgid "textempty"
+msgstr "Egy vagy több mező üres"
+
+#, php-format
+msgid "startdate_notfuture"
+msgstr "Kezdési dátum nem lehet múltbeli időpont"
+
+#, php-format
+msgid "endate_notgreater"
+msgstr "A befejezés időpontját be kell állítani, és későbbinek kell lennie, mint a Kezdés időpontjának"
+
+#, php-format
+msgid "acc_fetchmail"
+msgstr "Fetchmail"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Típus"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "POP3/IMAP Szerver"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Email-ek törlése a szerverről, miután letöltődtek"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Engedélyezés"
+
+#, php-format
+msgid "nofetch"
+msgstr "Nincsen elérhető üzenetek"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Elérhető üzenetek"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Valóban törölni szeretné ezt a bejegyzést?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Korlát elérve"
+
+#, php-format
+msgid "password"
+msgstr "Jelszó"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Jelszó megváltoztatása"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Jelenlegi Jelszó:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Új Jelszó:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Új Jelszó megerősítése:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Kérem adja meg az új jelszót."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Kérem adja meg a jelenlegi jelszavát."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "Jelenlegi jelszó nem megfelelő."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Az új jelszavak nem egyeznek, kérem próbálja meg újra."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "A jelszó túl rövid: %d karakter szükséges."
+
+#, php-format
+msgid "acc_wblist"
+msgstr "Black/White listák"
+
+#, php-format
+msgid "wblisttype"
+msgstr "Típus"
+
+#, php-format
+msgid "wblistwhitelist"
+msgstr "White lista"
+
+#, php-format
+msgid "wblistblacklist"
+msgstr "Black lista"
+
+#, php-format
+msgid "wblistpriority"
+msgstr "Prioritás"
+
+#, php-format
+msgid "wblistenabled"
+msgstr "Engedélyezve"
+
+#, php-format
+msgid "wblistentries"
+msgstr "Létező bejegyzések"
+
+#, php-format
+msgid "wblistnorules"
+msgstr "Nincsenek bejegyzések"
+
+#, php-format
+msgid "wblistdelconfirm"
+msgstr "Valóban törölni szeretné ezt a bejegyzést?"
+
+#, php-format
+msgid "wblimitreached"
+msgstr "Korlát elérve"
+
+#, php-format
+msgid "acc_acc"
+msgstr "Profil"
+
+#, php-format
+msgid "acc_alias"
+msgstr "Linkelt email címek"
+
+#, php-format
+msgid "acc_general"
+msgstr "Álltalános"
+
+#, php-format
+msgid "acc_pass"
+msgstr "Jelszó"
+
+#, php-format
+msgid "acc_forward"
+msgstr "Továbbítás"
+
+#, php-format
+msgid "acc_filter"
+msgstr "Levél Szűrő"
+
+#, php-format
+msgid "acc_lastlogin"
+msgstr "Utolsó bejelentkezés"
+
+#, php-format
+msgid "acc_defaultidentity"
+msgstr "Alapértelmezett azonosító"
+
+#, php-format
+msgid "acc_noalias"
+msgstr "Nincsenek linkelt email címek"
+
+#, php-format
+msgid "forwardingaddress"
+msgstr "Továbbítandó cím"
+
+#, php-format
+msgid "forwardingenabled"
+msgstr "Engedélyezve"
+
+#, php-format
+msgid "forwardingloop"
+msgstr "Ez a továbbítás hurokba kerül"
+
+#, php-format
+msgid "forwardingempty"
+msgstr "Kérem adja meg a tovvábbításhoz szükséges címet"
+
+#, php-format
+msgid "invalidaddress"
+msgstr "Érvénytelen Email Cím"
+
+#, php-format
+msgid "filtername"
+msgstr "Név"
+
+#, php-format
+msgid "filtersource"
+msgstr "Forrás"
+
+#, php-format
+msgid "filtersubject"
+msgstr "Tárgy"
+
+#, php-format
+msgid "filterfrom"
+msgstr "Küldő"
+
+#, php-format
+msgid "filterto"
+msgstr "Címzett"
+
+#, php-format
+msgid "filtercontains"
+msgstr "Tartalmazza"
+
+#, php-format
+msgid "filteris"
+msgstr "Egyezik"
+
+#, php-format
+msgid "filterbegins"
+msgstr "Kezdődik"
+
+#, php-format
+msgid "filterends"
+msgstr "Végződik"
+
+#, php-format
+msgid "filteraction"
+msgstr "Folyamat"
+
+#, php-format
+msgid "filtermove"
+msgstr "Mozgatás"
+
+#, php-format
+msgid "filterdelete"
+msgstr "Törlés"
+
+#, php-format
+msgid "filterenabled"
+msgstr "Engedélyezve"
+
+#, php-format
+msgid "filteradd"
+msgstr "Hozzáad"
+
+#, php-format
+msgid "filternorules"
+msgstr "Nincsenek létező szabályok"
+
+#, php-format
+msgid "filter_entries"
+msgstr "Szabályok"
+
+#, php-format
+msgid "filterdelconfirm"
+msgstr "Valóban törölni szeretné ezt a szabályt?"
+
+#, php-format
+msgid "filterlimitreached"
+msgstr "Korlát elérve"
+
+#, php-format
+msgid "policy_name"
+msgstr "Szabály"
+
+#, php-format
+msgid "spammove"
+msgstr "Mozgassa a Kéretlen leveleket a Kéretlen levelek mappába"
+
+#, php-format
+msgid "policy_entries"
+msgstr "Létező Szabályok"
+
+#, php-format
+msgid "policy_tag"
+msgstr "Jelölési szint"
+
+#, php-format
+msgid "policy_kill"
+msgstr "Kidobási szint"
+
+#, php-format
+msgid "spamnopolicies"
+msgstr "Nincsenek szabályok felvéve"
+

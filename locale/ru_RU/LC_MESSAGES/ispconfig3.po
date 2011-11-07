@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR THE COPYRIGHT-HOLDER
+# This file is distributed under the same license as the SITE site.
+# FIRST AUTHOR <EMAIL ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SITE VERSION\n"
+"POT-Creation-Date: Mon, 04 Oct 2010 15:29:33 +0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
+"Language-Team: LANGUAGE <LL li org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "acc_acc"
+msgstr "учетная запись"
+
+#, php-format
+msgid "acc_alias"
+msgstr "алиас"
+
+#, php-format
+msgid "acc_general"
+msgstr "общее"
+
+#, php-format
+msgid "acc_pass"
+msgstr "пароль"
+
+#, php-format
+msgid "acc_forward"
+msgstr "пересылка"
+
+#, php-format
+msgid "acc_fetchmail"
+msgstr "сборная служба"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "автоответ"
+
+#, php-format
+msgid "acc_filter"
+msgstr "фильтр"
+
+#, php-format
+msgid "lastlogin"
+msgstr "прошлый раз в системе"
+
+#, php-format
+msgid "defaultidentity"
+msgstr "отправитель по умолчанию"
+
+#, php-format
+msgid "noalias"
+msgstr "алиаса не существует"
+
+#, php-format
+msgid "password"
+msgstr "пароль"
+
+#, php-format
+msgid "changepasswd"
+msgstr "изменить пароль"
+
+#, php-format
+msgid "curpasswd"
+msgstr "старый пароль:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "новый пароль:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "повторите новый пароль:"
+
+#, php-format
+msgid "nopassword"
+msgstr "пожалуйста задайте новый пароль."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "пожалуйста задайте старый пароль."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "неправельный пароль."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "пароли не совпадают, пожалуйста повторите."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "новый пароль сильно короткий (минимум %d знаков)."
+
+#, php-format
+msgid "filtername"
+msgstr "название"
+
+#, php-format
+msgid "filtersource"
+msgstr "источник"
+
+#, php-format
+msgid "filtersubject"
+msgstr "тема"
+
+#, php-format
+msgid "filterfrom"
+msgstr "от кого"
+
+#, php-format
+msgid "filterto"
+msgstr "кому"
+
+#, php-format
+msgid "filtercontains"
+msgstr "содержит"
+
+#, php-format
+msgid "filteris"
+msgstr "соответствует"
+
+#, php-format
+msgid "filterbegins"
+msgstr "начинается на"
+
+#, php-format
+msgid "filterends"
+msgstr "заканчивается на"
+
+#, php-format
+msgid "filteraction"
+msgstr "действие"
+
+#, php-format
+msgid "filtermove"
+msgstr "передвинуть"
+
+#, php-format
+msgid "filterdelete"
+msgstr "удалить"
+
+#, php-format
+msgid "filterenabled"
+msgstr "включить"
+
+#, php-format
+msgid "filteradd"
+msgstr "добавить"
+
+#, php-format
+msgid "filternorules"
+msgstr "правил не существует"
+
+#, php-format
+msgid "filter_entries"
+msgstr "филтры"
+
+#, php-format
+msgid "filterdelconfirm"
+msgstr "вы действительно хотите удалить это правило?"
+
+#, php-format
+msgid "filterlimitreached"
+msgstr "ограничение достигнуто"
+
+#, php-format
+msgid "textempty"
+msgstr "одно или несколько обязательных полей пусты"
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "сообщение"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "включить"
+
+#, php-format
+msgid "and"
+msgstr "и"
+
+#, php-format
+msgid "autoreplystarton"
+msgstr "старт"
+
+#, php-format
+msgid "autoreplyendby"
+msgstr "конец"
+
+#, php-format
+msgid "startdate_notfuture"
+msgstr "число запуска не может быть в прошлом"
+
+#, php-format
+msgid "endate_notgreater"
+msgstr "число окончания обязательно и не может быть раньше числа запуска"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "тип"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "POP3/IMAP сервер"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "после сборки удалить почту с удаленного сервера"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "включить"
+
+#, php-format
+msgid "nofetch"
+msgstr "нет записей"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "записи"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "вы действительно хотите удалить эту запись?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "ограничение достигнуто"
+

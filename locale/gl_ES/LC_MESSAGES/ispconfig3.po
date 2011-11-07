@@ -1,0 +1,321 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR THE COPYRIGHT-HOLDER
+# This file is distributed under the same license as the SITE site.
+# FIRST AUTHOR <EMAIL ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SITE VERSION\n"
+"POT-Creation-Date: Thu, 27 Oct 2011 12:32:13 +0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL ADDRESS>\n"
+"Language-Team: LANGUAGE <LL li org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=ISO-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, php-format
+msgid "acc_autoreply"
+msgstr "Resposta automática"
+
+#, php-format
+msgid "autoreplymessage"
+msgstr "Mensaxe"
+
+#, php-format
+msgid "autoreplyenabled"
+msgstr "Activo"
+
+#, php-format
+msgid "and"
+msgstr "e"
+
+#, php-format
+msgid "autoreplystarton"
+msgstr "Dende o"
+
+#, php-format
+msgid "autoreplyendby"
+msgstr "Ata o"
+
+#, php-format
+msgid "textempty"
+msgstr "É obrigatorio encher tódolos campos"
+
+#, php-format
+msgid "startdate_notfuture"
+msgstr "A data de comezo non pode estar no pasado"
+
+#, php-format
+msgid "endate_notgreater"
+msgstr "Ten que especificar unha data de remate, e ten que ser posterior á de comezo"
+
+#, php-format
+msgid "acc_fetchmail"
+msgstr "Contas externas"
+
+#, php-format
+msgid "fetchmailtyp"
+msgstr "Tipo"
+
+#, php-format
+msgid "fetchmailserver"
+msgstr "Servidor POP3/IMAP"
+
+#, php-format
+msgid "fetchmaildelete"
+msgstr "Borrar as mensaxes do servidor logo de descargalas"
+
+#, php-format
+msgid "fetchmailenabled"
+msgstr "Activo"
+
+#, php-format
+msgid "nofetch"
+msgstr "Non se configurou ningunha conta"
+
+#, php-format
+msgid "fetchmail_entries"
+msgstr "Contas configuradas"
+
+#, php-format
+msgid "fetchmaildelconfirm"
+msgstr "Seguro que quere borrar esta conta?"
+
+#, php-format
+msgid "fetchmaillimitreached"
+msgstr "Non se poden engadir máis contas"
+
+#, php-format
+msgid "password"
+msgstr "Contrasinal"
+
+#, php-format
+msgid "changepasswd"
+msgstr "Cambiar o contrasinal"
+
+#, php-format
+msgid "curpasswd"
+msgstr "Contrasinal actual:"
+
+#, php-format
+msgid "newpasswd"
+msgstr "Contrasinal novo:"
+
+#, php-format
+msgid "confpasswd"
+msgstr "Confirme o contrasinal novo:"
+
+#, php-format
+msgid "nopassword"
+msgstr "Por favor, introduza un contrasinal novo."
+
+#, php-format
+msgid "nocurpassword"
+msgstr "Por favor, introduza o contrasinal actual."
+
+#, php-format
+msgid "passwordincorrect"
+msgstr "O contrasinal actual é incorrecto."
+
+#, php-format
+msgid "passwordinconsistency"
+msgstr "Os contrasinais non coinciden. Por favor, introdúzaos de novo."
+
+#, php-format
+msgid "passwordminlength"
+msgstr "O contrasinal é curto de máis. Debe de ter, polo menos, %d caracteres."
+
+#, php-format
+msgid "acc_wblist"
+msgstr "Listas branca e negra"
+
+#, php-format
+msgid "wblisttype"
+msgstr "Tipo"
+
+#, php-format
+msgid "wblistwhitelist"
+msgstr "Lista branca"
+
+#, php-format
+msgid "wblistblacklist"
+msgstr "Lista negra"
+
+#, php-format
+msgid "wblistpriority"
+msgstr "Prioridade"
+
+#, php-format
+msgid "wblistenabled"
+msgstr "Activo"
+
+#, php-format
+msgid "wblistentries"
+msgstr "Entradas definidas nas listas"
+
+#, php-format
+msgid "wblistnorules"
+msgstr "Non se definiron entradas"
+
+#, php-format
+msgid "wblistdelconfirm"
+msgstr "Seguro que quere borrar esta entrada?"
+
+#, php-format
+msgid "wblimitreached"
+msgstr "Non se poden engadir máis entradas"
+
+#, php-format
+msgid "acc_acc"
+msgstr "Conta"
+
+#, php-format
+msgid "acc_alias"
+msgstr "Contas de correo ligadas a"
+
+#, php-format
+msgid "acc_general"
+msgstr "Xeral"
+
+#, php-format
+msgid "acc_pass"
+msgstr "Contrasinal"
+
+#, php-format
+msgid "acc_forward"
+msgstr "Reenvíos"
+
+#, php-format
+msgid "acc_filter"
+msgstr "Filtros de correo"
+
+#, php-format
+msgid "acc_lastlogin"
+msgstr "Última sesión"
+
+#, php-format
+msgid "acc_defaultidentity"
+msgstr "Identidade predeterminada"
+
+#, php-format
+msgid "acc_noalias"
+msgstr "Non ten contas de correo ligadas"
+
+#, php-format
+msgid "forwardingaddress"
+msgstr "Reenviar a"
+
+#, php-format
+msgid "forwardingenabled"
+msgstr "Activo"
+
+#, php-format
+msgid "forwardingloop"
+msgstr "Este reenvío vai crear un bucle"
+
+#, php-format
+msgid "forwardingempty"
+msgstr "Por favor, introduza o enderezo ao que quere reenviar"
+
+#, php-format
+msgid "invalidaddress"
+msgstr "Enderezo de correo incorrecto"
+
+#, php-format
+msgid "filtername"
+msgstr "Nome"
+
+#, php-format
+msgid "filtersource"
+msgstr "Regra"
+
+#, php-format
+msgid "filtersubject"
+msgstr "Asunto"
+
+#, php-format
+msgid "filterfrom"
+msgstr "De"
+
+#, php-format
+msgid "filterto"
+msgstr "Para"
+
+#, php-format
+msgid "filtercontains"
+msgstr "contén"
+
+#, php-format
+msgid "filteris"
+msgstr "igual a"
+
+#, php-format
+msgid "filterbegins"
+msgstr "comeza con"
+
+#, php-format
+msgid "filterends"
+msgstr "remata con"
+
+#, php-format
+msgid "filteraction"
+msgstr "Acción"
+
+#, php-format
+msgid "filtermove"
+msgstr "Mover"
+
+#, php-format
+msgid "filterdelete"
+msgstr "Borrar"
+
+#, php-format
+msgid "filterenabled"
+msgstr "Activo"
+
+#, php-format
+msgid "filteradd"
+msgstr "Engadir"
+
+#, php-format
+msgid "filternorules"
+msgstr "Non se definiron filtros de correo"
+
+#, php-format
+msgid "filter_entries"
+msgstr "Filtros"
+
+#, php-format
+msgid "filterdelconfirm"
+msgstr "Seguro que quere borrar este filtro?"
+
+#, php-format
+msgid "filterlimitreached"
+msgstr "Non é posible engadir máis filtros"
+
+#, php-format
+msgid "policy_name"
+msgstr "Política"
+
+#, php-format
+msgid "spammove"
+msgstr "Mover os correos detectados como spam ao cartafol "Correo lixo""
+
+#, php-format
+msgid "policy_entries"
+msgstr "Políticas disponibles"
+
+#, php-format
+msgid "policy_tag"
+msgstr "Puntuación para marcar como spam"
+
+#, php-format
+msgid "policy_kill"
+msgstr "Puntuación para borrar"
+
+#, php-format
+msgid "spamnopolicies"
+msgstr "Non se definiron políticas"
+
