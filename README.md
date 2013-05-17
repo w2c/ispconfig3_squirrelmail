@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Installation/upgrade instructions
 ---------------------------------
 
@@ -116,4 +117,3 @@ Disclaimer
 Neither of the authors of the different parts of the plugins or the installation instructions are responsible for any harm/damage done to your system or any other problems as a result of using these plugins downloaded in either the SVN or any other copy otherwise obtained. By downloading and using the plugins, you agree to the fact that usage of the plugins, it's individual language packs, configuration files and installation instructions is at your sole risk and no responsibility can be taken by any of the authors.
 
 However if any problems do somehow emerge, please do feel free to ask for help here: http://howtoforge.com/forums/showthread.php?p=213239
-
