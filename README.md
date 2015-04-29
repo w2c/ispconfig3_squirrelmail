@@ -33,13 +33,8 @@ Make sure you are in the plugins directory of your SquirrelMail installation
 $ cd plugins
 
 Get the code.
-FOR VERSION 3.0.2.2
 
-$ svn co http://svn.web-wack.at/ispconfig3_squirrelmail/branches/3.0.2.2 ispconfig3
-
-FOR VERSION 3.0.3
-
-$ svn co http://svn.web-wack.at/ispconfig3_squirrelmail/trunk ispconfig3
+$ svn co https://github.com/w2c/ispconfig3_squirrelmail/trunk ispconfig3
 
 Check that the the ispconfig3 directory is created and set the ownership permissions to your web server user
 
