@@ -30,6 +30,9 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 function squirrelmail_plugin_init_ispconfig3()
 {
     global $squirrelmail_plugin_hooks;
+
+    $base_locale = setlocale(LC_MESSAGES, "0");
+    sq_setlocale(LC_MESSAGES, $base_locale . '.UTF-8');
     
     $squirrelmail_plugin_hooks['optpage_register_block']['ispconfig3'] = 'ispc_optpage_register_block';  
     $squirrelmail_plugin_hooks['login_before']['ispconfig3'] = 'ispc_autoselect'; 

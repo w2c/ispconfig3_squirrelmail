@@ -3,7 +3,7 @@ $ispc_config['remote_soap_user'] = 'john';
 $ispc_config['remote_soap_pass'] = 'doe';
 $ispc_config['soap_url'] = 'http://127.0.0.1:8080/remote/';
 
-$ispc_config['enable_modules'] = array('autoselect', 'acount', 'fetchmail', 'forwarding', 'autoreply', 'filter', 'spam_policy', 'wblist');
+$ispc_config['enable_modules'] = array('autoselect', 'account', 'fetchmail', 'forwarding', 'autoreply', 'filter', 'spam_policy', 'wblist');
 $ispc_config['password_confirm_current'] = TRUE;
 $ispc_config['password_min_length'] = 6;
 $ispc_config['filter_limit'] = 15;
